@@ -19,12 +19,13 @@ referências-1
 revisão-do-tema-algoritmos---execução
 resolução-2
 referências-2
-revisão-do-tema-algoritmos---pseudo-código
+revisão-do-tema-algoritmos---busca-binária---dividir-para-conquistar.
 resolução-3
 referências-3
 section-1
 revisão-do-tema-recursividade-em-linguagens-de-programação-1
 resolução-4
+melhorando-o-nome-das-variáveis-para-deixar-mais-didático
 referências-4
 cross
 chapters-and-sub-chapters
