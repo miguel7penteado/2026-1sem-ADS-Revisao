@@ -1,0 +1,20 @@
+output_dir: "docs"
+book_filename: "2026-ADS-1Sem-Revisao"
+delete_merged_file: true
+rmd_files: [
+    "index.Rmd",
+    "01-Semana-2026-02-24/01-revisao-01-2026-02-24.Rmd",
+    "02-Semana-2026-03-03/02-revisao-02-2026-03-03.Rmd",
+    "03-Semana-2026-03-10/03-revisao-03-2026-03-10.Rmd",
+    "04-Semana-2026-03-17/04-revisao-04-2026-03-17.Rmd",
+    "05-Semana-2026-04-14/05-revisao-05-2026-04-14.Rmd",
+    "06-Semana-2026-04-21/06-revisao-05-2026-04-21.Rmd",
+    "07-Semana-2026-04-28/07-revisao-07-2026-04-28.Rmd",
+    "08-Semana-2026-05-05/08-revisao-08-2026-05-05.Rmd",
+    "09-Semana-2026-05-30/09-revisao-09-2026-05-30.Rmd",
+    "10-Semana-2026-06-09/10-revisao-10-2026-06-09.Rmd",
+]
+
+language:
+  ui:
+    chapter_name: "Capítulo "

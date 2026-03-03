@@ -1,0 +1,83 @@
+---
+title: "ADS - 1sem 2026 - Revisão das Disciplinas"
+author: "Professor Miguél Suares"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+url: your book url like https://bookdown.org/yihui/bookdown
+cover-image: images/cover.jpg
+description: |
+  
+link-citations: yes
+github-repo: miguel7penteado/2026-1sem-ADS-Revisao
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plantuml)
+
+
+# Detectar o sistema operacional
+so <- Sys.info()[["sysname"]]
+
+if (so == "Linux")
+{
+  plantumlOptions(jar_path = "/usr/share/java/plantuml.jar")  
+}else 
+  if (so == "Windows") 
+  {
+    plantumlOptions(jar_path = "C:/PROGRA~1/COMMON~1/Oracle/Java/libs/plantuml-1.2025.4.jar")
+  }else
+  {
+    print(paste("Sistema não reconhecido:", so))
+  }
+
+
+knitr::knit_engines$set(plantuml = function(options)
+{
+    code <- paste(options$code, collapse = "\n")
+  
+  if (is.null(options$plantuml.path)) 
+  {
+    path <-  "."
+  } else
+    {
+      path <- options$plantuml.path
+    }
+  
+  dir.create(path, showWarnings = FALSE, recursive = TRUE)
+  fig <- paste0(options$label, ".", "svg")
+  fig <- file.path(path, fig)
+  if (options$eval) plot(x = plantuml(code), vector=FALSE, file=fig)
+  knitr::engine_output(options, out = list(knitr::include_graphics(fig)))
+})
+```
+
+# Sobre estas anotações {.unnumbered}
+
+—————————————————————————————————————————————
+
+Estas anotações são apenas lembretes das aulas expostas em sala.
+
+## ACESSO AO GITBOOK CELULAR
+
+—————————————————————————————————————————————
+
+#### <https://miguel7penteado.github.io/2026-1sem-ADS-Revisao>
+
+![](images/qr-code-disciplina.jpg)
+
+## Leitores de formato de arquivo EPUB para SmartPhone
+
+—————————————————————————————————————————————
+
+### ANDROID
+
+#### **Moon+ Reader**
+
+![](images/qrcode/leitor_epub/MoonReaderPlus.jpg){width="340"}
+
+## Livros Texto da Disciplina
+
+—————————————————————————————————————————————
