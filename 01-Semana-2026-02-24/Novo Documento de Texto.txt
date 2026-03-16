@@ -1,0 +1,231 @@
+
+
+
+
+
+
+TOMO 11-Questão 4 - Modelagem de dados. Modelo de entidade-relacionamento. Chave primária. MBD
+TOMO 11-Questão 3 - Modelagem de dados. Modelo de entidade-relacionamento. Linguagem SQL. MBD
+
+TOMO 03-Questão 3 - Redes locais. Topologia de redes. Hub. Switch. Volume de colisões na LAN. DATACENTER
+TOMO 06-Questão 1 - Sistemas distribuídos. Arquitetura de software. Comunicação entre computadores. Compartilhamento. DATACENTER 
+TOMO 06-Questão 9 - Redes de computadores. Protocolo IP. Domain Name System (DNS). DATACENTER 
+
+TOMO 07-Questão 1 - Riscos. Gerenciamento de riscos. Gerenciamento de projetos. DATACENTER   GES_SER_TI
+TOMO 08-Questão 2 - Gerenciamento de projetos. Redes PERT. Método CPM. DATACENTER 
+TOMO 08-Questão 7 - Inovação e empreendedorismo. DATACENTER
+
+
+TOMO 01- Questão 5 - Máquina Virtual (MV). LTP
+Questão 5.1
+O conceito de máquina virtual (MV) foi usado, na década de 1970, no sistema operacional IBM System 370. Atualmente, centros de dados (datacenters) usam MVs para migrar tarefas entre servidores conectados em rede e, assim, equilibrar carga de processamento. Além disso, plataformas atuais de desenvolvimento de software empregam MVs (Java, .NET). Uma MV pode ser construída para emular um processador ou um computador completo. Um código desenvolvido para uma máquina real pode ser executado de forma transparente em uma MV.
+Com relação a essas informações, assinale a opção correta.
+    A. O conceito de transparência mencionado indica que a MV permite que um aplicativo acesse diretamente o hardware da máquina.
+    B. Uma das vantagens mais significativas de uma MV é a economia de carga de CPU e de memória RAM na execução de um aplicativo.
+    **C. Uma MV oferece maior controle de segurança, uma vez que aplicativos são executados em um ambiente controlado.**
+    D. Para emular uma CPU dual-core, uma MV deve ser instalada e executada em um computador com CPU dual-core.
+    E. Como uma MV não é uma máquina real, um sistema operacional nela executado fica automaticamente imune a vírus.
+
+
+TOMO 02-Questão 3 - Solução recursiva de problemas. LTP
+Questão 3.1
+Os termos da sequência de Fibonacci são definidos por:
+    Fibonacci(0) = 0
+    Fibonacci(1) = 1
+    Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)
+
+Uma solução recursiva para o cálculo do i-ésimo termo da sequência é dada pela função a seguir.	
+
+```pseudocodigo
+    01.  funcao fibonacci(inteiro longo n)
+    02.      se((n=0) OU (n=1)) entao
+    03.          retorne n
+    04.      senao
+    05.          retorne fibonacci(n-1) + fibonacci(n-2)
+    06.      fim se
+    07.  fim
+```
+
+Acerca da execução recursiva dessa função, assinale a opção incorreta.
+    A. À medida que o valor de n cresce, há um aumento no número de chamadas recursivas.
+    B. Na linha 4, a ordem de execução é calcular o valor para fibonacci(n-1) e somente depois calcular o valor para fibonacci(n-2).
+    **C. O método recursivo é o mais eficiente para o cálculo do i-ésimo termo da sequência de Fibonacci, pois realiza duas chamadas por passo da recursão, cada uma mais simples do que a chamada original.**
+    D. As condições de parada da recursão são: o valor de n é 0 ou o valor de n é 1.
+    E. O uso da recursão para o problema da série de Fibonacci não é indicado, pois ele gera rapidamente uma explosão de chamadas do método.
+
+
+TOMO 03-Questão 6 - Algoritmos. Execução. LTP 
+Questão 6.1
+Leia o algoritmo a seguir.
+
+```pseudocodigo
+    01.  Algoritmo MatrizENADE2008
+    02.  variaveis
+    03.      M[0..2][0..3], I, J, C : inteiro
+    04.  inicio
+    05.      C ← 0
+    06.      para I ← 0 ate 2 passo 1 faca
+    07.          para J ← 0 ate 3 passo 1 faca
+    08.              C ← C + 1
+    09.              M[I][J] ← C
+    10.          fim para
+    11.      fim para
+    12.      para I ← 0 ate 2 passo 1 faca
+    13.          para J ← 0 ate 3 passo 1 faca
+    14.              C ← M[2-I][3-J]
+    15.              M[I][J] ← C
+    16.          fim para
+    17.      fim para
+    18.  fim algoritmo
+```
+
+Considerando a execução do algoritmo apresentada acima, faça o que se pede a seguir.
+    A) Apresente os dados da matriz M ao término da execução da linha 10.  
+    B) Apresente os dados da matriz M ao término da execução da linha 15.  
+
+A) A entrada para o processamento é a matriz bidimensional com todos os valores zerados, conforme abaixo.
+
+|   |   |   |   |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 |
+
+É fundamental entender como a matriz bidimensional está sendo processada na questão. O índice I varre as linhas e o índice J varre as colunas. Então, para o índice I começando com 0 (zero), o índice J variará de 0 (zero) até 3 (três). Como a questão solicita a visualização da matriz após a linha 10, o índice I somente conterá o valor 0 (zero). Isso significa que teremos de tirar uma “foto” da matriz quando o índice I for zero e o índice J variar de 0 até 3.
+O quadro 1 mostra a evolução do processamento até a linha 10.
+
+| I | J | C | M[I,J] |
+|---|---|---|--------|
+| 0 | 0 | 1 | 1      |
+| 0 | 1 | 2 | 2      |
+| 0 | 2 | 3 | 3      |
+| 0 | 3 | 4 | 4      |
+
+
+Portanto, a saída da matriz após a linha 10 é a seguinte:
+
+|   |   |   |   |
+|---|---|---|---|
+| 1 | 2 | 3 | 4 |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 |
+
+B) Para resolver o segundo item da questão, é fundamental entender que a entrada para o item B não é a saída do item A. Ou seja, para que tenhamos os dados corretos que iniciarão o segundo loop, não podemos considerá-los como sendo a resposta ao item A, que solicitou a visualização após a linha 10. A entrada para o item B é a matriz resultante após a linha 11. Portanto, teremos que continuar o processamento do algoritmo após a linha 10, conforme apresentado no quadro 2.
+
+| I | J | C  | M[I,J] |
+|---|---|----|--------|
+| 0 | 0 | 1  | 1      |
+| 0 | 1 | 2  | 2      |
+| 0 | 2 | 3  | 3      |
+| 0 | 3 | 4  | 4      |
+| 1 | 0 | 5  | 5      |
+| 1 | 1 | 6  | 6      |
+| 1 | 2 | 7  | 7      |
+| 1 | 3 | 8  | 8      |
+| 2 | 0 | 9  | 9      |
+| 2 | 1 | 10 | 10     |
+| 2 | 2 | 11 | 11     |
+| 2 | 3 | 12 | 12     |
+
+Portanto, a matriz que é a entrada para o processamento do item B é:
+
+|   |    |    |    |
+|---|----|----|----|
+| 1 | 2  | 3  | 4  |
+| 5 | 6  | 7  | 8  |
+| 9 | 10 | 11 | 12 |
+
+Outro ponto de atenção é o momento em que é pedida a visualização da matriz do item B. Na linha 19, diferentemente do item A, só é processada uma coluna do segundo loop, a posição onde I=0 e J=0. A atribuição é feita trazendo o dado que se encontra na posição M[2-I][3-J] para a posição M[I][J].
+Como tanto I quanto J valem 0 (zero) nesse momento do processamento, a posição é M[2][3], porque 2-0=2 e 3-0=3. Essa é a posição de origem. A posição de destino é M[0][0].
+O valor que se encontra em M[2][3] é 12. Esse valor será colocado em M[0][0]. Com isso, a matriz fica conforme abaixo:
+
+|    |    |    |    |
+|----|----|----|----|
+| 12 | 2  | 3  | 4  |
+| 5  | 6  | 7  | 8  |
+| 9  | 10 | 11 | 12 |
+
+
+TOMO 03-Questão 7 - Algoritmos. Pseudocódigo. Comandos. LTP
+Questão 7.1
+Leia o algoritmo a seguir.
+
+```pseudocodigo
+    01.  funcao busca(V[0..9] : inteiro, K : inteiro) : inteiro
+    02.  variaveis
+    03.      C, F, K, M : inteiro
+    04.  inicio
+    05.      F ← 9
+    06.      [__________________________]
+    07.      enquanto((F > C) ou (V[M] <> K))
+    08.          [__________________________]
+    09.          se(K < V[M]) entao
+    10.              F ← M - 1
+    11.          senao
+    12.              [__________________________]
+    13.          fim se
+    14.      fim enquanto
+    15.      se(V[M] <> K) entao
+    16.          retorne(0)
+    17.      senao
+    18.          retorne(M)
+    19.      fim se
+    20.  fim
+```
+O algoritmo representado pelo pseudocódigo acima está incompleto, pois faltam 3 linhas de código. A função busca desse algoritmo recebe um vetor ordenado de forma crescente e um valor a ser pesquisado. A partir disso, essa função verificará se o número armazenado no ponto mediano do vetor é o número procurado. Se for o número procurado, retornará o índice da posição do elemento no vetor e encerrará a busca. Se não for, a função segmentará o vetor em duas partes a partir do ponto mediano, escolherá o segmento no qual o valor procurado está inserido, e o processo se repetirá. 
+A partir dessas informações, assinale a opção que contém os comandos que completam, respectivamente, as linhas 6, 8 e 12 do algoritmo.
+
+```pseudocodigo
+    **A.** C ← 0
+		M ← (C + F) / 2
+		C ← M + 1
+
+    B. C ← 1
+		M ← (C + F) / 2
+		C ← M - 1
+
+    C. C ← 0
+		C ← M + 1
+		M ← (C + F) / 2
+
+    D. C ← 1
+		C ← M + 1
+		M ← (C + F) / 2
+
+    E. C ← 1
+		M ← (C + F) / 2
+		C ← M + 1
+```
+
+TOMO 06-Questão 3 - Funções recursivas. Linguagem C. LTP
+Questão 3.1
+Leia o texto a seguir.
+Uma função é denominada recursiva quando ela é chamada novamente dentro de seu corpo. Implementações recursivas tendem a ser menos eficientes, porém facilitam a codificação e seu entendimento.
+CELES, W.; CERQUEIRA, R.; RANGEL, J. L. Introdução a estrutura de dados. Rio de Janeiro, 2004 (com adaptações).
+
+Considere a função recursiva f(), a qual foi escrita em linguagem C:
+
+```c
+int f( int v[], int n)
+{
+    if(n == 0)
+       return 0;
+    else
+	{
+       int s;
+       s = f(v, n-1);
+       if( v[n-1] > 0 ) s = s + v[n-1];
+           return s;
+    }
+}
+```
+
+Suponha que a função f() é acionada com os seguintes parâmetros de entrada:
+
+Nesse caso, o valor de retorno da função f() será
+A. 8.
+B. 10.
+**C. 13.**
+D. 15.
+E. 18.
+
