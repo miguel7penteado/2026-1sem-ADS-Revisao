@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 1 REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária | ADS - 1sem 2026 - Revisão das Disciplinas</title>
+  <meta name="description" content="Capítulo 1 REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <meta name="generator" content="bookdown 0.46.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 1 REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+  
+  <meta name="github-repo" content="miguel7penteado/2026-1sem-ADS-Revisao" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 1 REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  
+  
+  <meta name="twitter:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+
+<meta name="author" content="Professor Miguél Suares" />
+
+
+<meta name="date" content="2026-03-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="revisão-temas-específicos-ads-banco-de-dados.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">2026-ADS- Revisão de Temas do Curso</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Sobre estas anotações</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acesso-ao-gitbook-celular"><i class="fa fa-check"></i><b>0.1</b> ACESSO AO GITBOOK CELULAR</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#leitores-de-formato-de-arquivo-epub-para-smartphone"><i class="fa fa-check"></i><b>0.2</b> Leitores de formato de arquivo EPUB para SmartPhone</a>
+<ul>
+<li class="chapter" data-level="0.2.1" data-path="index.html"><a href="index.html#android"><i class="fa fa-check"></i><b>0.2.1</b> ANDROID</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#livros-texto-da-disciplina"><i class="fa fa-check"></i><b>0.3</b> Livros Texto da Disciplina</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><i class="fa fa-check"></i><b>1</b> REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-virtualiza%C3%A7%C3%A3o-e-m%C3%A1quinas-virtuais"><i class="fa fa-check"></i><b>1.1</b> Revisão do tema VIRTUALIZAÇÃO E MÁQUINAS VIRTUAIS:</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>1.1.1</b> Resolução:</a></li>
+<li class="chapter" data-level="1.1.2" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#loteamento-de-recursos-processador-mem%C3%B3ria-e-armazenamento"><i class="fa fa-check"></i><b>1.1.2</b> “Loteamento” de Recursos: Processador, Memória e Armazenamento</a></li>
+<li class="chapter" data-level="1.1.3" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias"><i class="fa fa-check"></i><b>1.1.3</b> Referências:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-recursividade-em-linguagens-de-programa%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>1.2</b> Revisão do tema RECURSIVIDADE em linguagens de programação:</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-1"><i class="fa fa-check"></i><b>1.2.1</b> RESOLUÇÃO:</a></li>
+<li class="chapter" data-level="1.2.2" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-1"><i class="fa fa-check"></i><b>1.2.2</b> Referências:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-algoritmos---execu%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>1.3</b> Revisão do tema ALGORITMOS - EXECUÇÃO</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-2"><i class="fa fa-check"></i><b>1.3.1</b> RESOLUÇÃO:</a></li>
+<li class="chapter" data-level="1.3.2" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-2"><i class="fa fa-check"></i><b>1.3.2</b> Referências:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-algoritmos---busca-bin%C3%A1ria---dividir-para-conquistar."><i class="fa fa-check"></i><b>1.4</b> Revisão do tema ALGORITMOS - BUSCA BINÁRIA - “<strong>DIVIDIR PARA CONQUISTAR</strong>”.</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-3"><i class="fa fa-check"></i><b>1.4.1</b> RESOLUÇÃO:</a></li>
+<li class="chapter" data-level="1.4.2" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-3"><i class="fa fa-check"></i><b>1.4.2</b> Referências:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#section-1"><i class="fa fa-check"></i><b>1.5</b> </a></li>
+<li class="chapter" data-level="1.6" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-recursividade-em-linguagens-de-programa%C3%A7%C3%A3o-1"><i class="fa fa-check"></i><b>1.6</b> Revisão do tema RECURSIVIDADE em linguagens de programação:</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-4"><i class="fa fa-check"></i><b>1.6.1</b> RESOLUÇÃO:</a></li>
+<li class="chapter" data-level="1.6.2" data-path="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-4"><i class="fa fa-check"></i><b>1.6.2</b> Referências:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html"><i class="fa fa-check"></i><b>2</b> REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#quest%C3%A3o-3"><i class="fa fa-check"></i><b>2.1</b> Questão 3</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#tabela-partido"><i class="fa fa-check"></i><b>2.1.1</b> 🧾 Tabela: Partido</a></li>
+<li class="chapter" data-level="2.1.2" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#tabela-candidato"><i class="fa fa-check"></i><b>2.1.2</b> 🧾 Tabela: Candidato</a></li>
+<li class="chapter" data-level="2.1.3" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#tabela-vota%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>2.1.3</b> 🧾 Tabela: Votação</a></li>
+<li class="chapter" data-level="2.1.4" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#pergunta-se"><i class="fa fa-check"></i><b>2.1.4</b> PERGUNTA-SE</a></li>
+<li class="chapter" data-level="2.1.5" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#alternativas"><i class="fa fa-check"></i><b>2.1.5</b> Alternativas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#quest%C3%A3o-4"><i class="fa fa-check"></i><b>2.2</b> Questão 4</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#fa%C3%A7a-um-diagrama-entidade-relacionamento-baseado-nestas-informa%C3%A7%C3%B5es-e-responda"><i class="fa fa-check"></i><b>2.2.1</b> FAÇA UM DIAGRAMA ENTIDADE-RELACIONAMENTO BASEADO NESTAS INFORMAÇÕES E RESPONDA</a></li>
+<li class="chapter" data-level="2.2.2" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#afirmativas"><i class="fa fa-check"></i><b>2.2.2</b> Afirmativas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#alternativas-1"><i class="fa fa-check"></i><b>2.2.3</b> Alternativas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="revisão-temas-específicos-ads-banco-de-dados.html"><a href="revisão-temas-específicos-ads-banco-de-dados.html#respostas"><i class="fa fa-check"></i><b>2.3</b> Respostas:</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>3</b> Parts</a></li>
+<li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>4.1</b> Footnotes</a></li>
+<li class="chapter" data-level="4.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>4.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>5</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>5.1</b> Equations</a></li>
+<li class="chapter" data-level="5.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>5.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="5.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>5.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>6</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>6.1</b> Publishing</a></li>
+<li class="chapter" data-level="6.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>6.2</b> 404 pages</a></li>
+<li class="chapter" data-level="6.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>6.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com Biblioteca R bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ADS - 1sem 2026 - Revisão das Disciplinas</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Capítulo 1</span> REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-temas-espec%C3%ADficos-ads---virtualiza%C3%A7%C3%A3o-recursividade-busca-bin%C3%A1ria" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="section" class="section level4 unnumbered hasAnchor">
+<h4>24/02/2026<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#section" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="professor-miguél-suares" class="section level4 unnumbered hasAnchor">
+<h4>Professor Miguél Suares<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#professor-migu%C3%A9l-suares" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<hr />
+</div>
+<div id="revisão-do-tema-virtualização-e-máquinas-virtuais" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Revisão do tema VIRTUALIZAÇÃO E MÁQUINAS VIRTUAIS:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-virtualiza%C3%A7%C3%A3o-e-m%C3%A1quinas-virtuais" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Exercício 01 - Tomo 01 - questão 05</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>O conceito de máquina virtual (MV) foi usado, na década de 1970, no sistema operacional IBM System 370. Atualmente, centros de dados (datacenters) usam MVs para migrar tarefas entre servidores conectados em rede e, assim, equilibrar carga de processamento. Além disso, plataformas atuais de desenvolvimento de software empregam MVs (Java, .NET). Uma MV pode ser construída para emular um processador ou um computador completo. Um código desenvolvido para uma máquina real pode ser executado de forma transparente em uma MV. Com relação a essas informações, assinale a opção correta.</td>
+</tr>
+<tr class="even">
+<td><ol style="list-style-type: upper-alpha">
+<li>O conceito de transparência mencionado indica que a MV permite que um aplicativo acesse diretamente o hardware da máquina.</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><ol start="2" style="list-style-type: upper-alpha">
+<li>Uma das vantagens mais significativas de uma MV é a economia de carga de CPU e de memória RAM na execução de um aplicativo.</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><ol start="3" style="list-style-type: upper-alpha">
+<li><strong>Uma MV oferece maior controle de segurança, uma vez que aplicativos são executados em um ambiente controlado.</strong></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><ol start="4" style="list-style-type: upper-alpha">
+<li>Para emular uma CPU dual-core, uma MV deve ser instalada e executada em um computador com CPU dual-core.</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><ol start="5" style="list-style-type: upper-alpha">
+<li>Como uma MV não é uma máquina real, um sistema operacional nela executado fica automaticamente imune a vírus.</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<div id="resolução" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Resolução:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Máquinas Virtuais são ambientes de memória e processamento criados por um software chamado <strong>hypervisor</strong>:</p>
+<table>
+<colgroup>
+<col width="49%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img src="01-Semana-2026-02-24/media/01-questao-01-hypervisor.jpg" /></td>
+<td><p>O que faz um hipervisor ?</p>
+<ol style="list-style-type: decimal">
+<li><p>Criar máquinas virtuais (VMs);</p></li>
+<li><p>Gerenciar CPU, memória, disco e rede ;</p></li>
+<li><p>Isolar os sistemas operacionais convidado ;</p></li>
+<li><p>Intermediar o acesso ao hardware físico;</p>
+<p>Tipos de hipervisores:</p>
+<p>Tipo 1 - Roda diretamente no Hardware;</p>
+<p>Tipo 2 - Roda hospedado um sistema operacional anfitrião;</p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="loteamento-de-recursos-processador-memória-e-armazenamento" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> “Loteamento” de Recursos: Processador, Memória e Armazenamento<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#loteamento-de-recursos-processador-mem%C3%B3ria-e-armazenamento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para cada máquina virtual criada, o sistema operacional anfitrião compartilha recursos com a máquina virtual criada pelo hypervisor e o sistema operacional hospedeiro de cada máquina virtual.</p>
+<p><img src="01-Semana-2026-02-24/media/01-questao-01-hypervisor-02.jpg" /></p>
+</div>
+<div id="referências" class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Referências:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>• MACHADO, F. B. Arquitetura de sistemas operacionais. Rio de Janeiro: LTC, 2013.
+• TANENBAUM, A. S.; BOS, H. Sistemas operacionais modernos. São Paulo: Pearson Education do Brasil, 2016.  
+• TOSCANI, S. Sistemas operacionais. São Paulo: Artmed, 2010.</code></pre>
+<hr />
+</div>
+</div>
+<div id="revisão-do-tema-recursividade-em-linguagens-de-programação" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Revisão do tema RECURSIVIDADE em linguagens de programação:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-recursividade-em-linguagens-de-programa%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Exercício 02 - Tomo 02 - questão 03</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="01-Semana-2026-02-24/media/02-Fibonacci.jpg" /></td>
+</tr>
+<tr class="even">
+<td>Os termos da sequência de Fibonacci são definidos por:</td>
+</tr>
+<tr class="odd">
+<td><pre class="pseudocode"><code>Fibonacci(0) = 0
+    Fibonacci(1) = 1
+    ...
+    Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)</code></pre>
+<p>Uma solução recursiva para o cálculo do <strong><em>i-</em>ésimo termo da sequência</strong> é dada pela função a seguir.</p></td>
+</tr>
+<tr class="even">
+<td><pre class="pseudocodigo"><code>ALGORITMO Fibonacci
+ENTRADA: n (Inteiro Longo)
+SAÍDA: O n-ésimo número da sequência
+
+INÍCIO
+    FUNÇÃO fibonacci(n: Inteiro Longo) : Inteiro Longo
+    INÍCIO
+        // Caso base: se n for 0 ou 1, retorna o próprio n
+        SE (n == 0) OU (n == 1) ENTÃO
+            RETORNE n
+        SENÃO
+            // Passo recursivo: soma os dois termos anteriores
+            RETORNE fibonacci(n - 1) + fibonacci(n - 2)
+        FIM_SE
+    FIM_FUNÇÃO
+FIM</code></pre></td>
+</tr>
+<tr class="odd">
+<td>Acerca da execução recursiva dessa função, assinale a opção incorreta.</td>
+</tr>
+<tr class="even">
+<td><ol style="list-style-type: upper-alpha">
+<li>À medida que o valor de n cresce, há um aumento no número de chamadas recursivas.</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><ol start="2" style="list-style-type: upper-alpha">
+<li>Na linha 4, a ordem de execução é calcular o valor para fibonacci(n-1) e somente depois calcular o valor para fibonacci(n-2).</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><ol start="3" style="list-style-type: upper-alpha">
+<li><strong>O método recursivo é o mais eficiente para o cálculo do i-ésimo termo da sequência de Fibonacci, pois realiza duas chamadas por passo da recursão, cada uma mais simples do que a chamada original.</strong></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><ol start="4" style="list-style-type: upper-alpha">
+<li>As condições de parada da recursão são: o valor de n é 0 ou o valor de n é 1.</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><ol start="5" style="list-style-type: upper-alpha">
+<li>O uso da recursão para o problema da série de Fibonacci não é indicado, pois ele gera rapidamente uma explosão de chamadas do método.</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<div id="resolução-1" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> RESOLUÇÃO:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A sequência de Fibbonacci</p>
+<p><strong>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89…</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Ordem</strong></td>
+<td><strong>zero</strong></td>
+<td><strong>1º</strong></td>
+<td><strong>2º</strong></td>
+<td><strong>3º</strong></td>
+<td><strong>4º</strong></td>
+<td><strong>5º</strong></td>
+<td><strong>6º</strong></td>
+<td><strong>7º</strong></td>
+<td><strong>8º</strong></td>
+<td><strong>9º</strong></td>
+<td><strong>10º</strong></td>
+<td><strong>11º</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Valor</strong></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+<td>13</td>
+<td>21</td>
+<td>34</td>
+<td>55</td>
+<td>89</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+\begin{aligned}[l]
+F(0) &amp;= 0 \\
+F(1) &amp;= 1 \\
+F(2) &amp;= F(1) + F(0) \implies (1 + 0) = 1 \\
+F(3) &amp;= F(2) + F(1) \implies (1 + 1) = 2 \\
+F(4) &amp;= F(3) + F(2) \implies (2 + 1) = 3 \\
+F(5) &amp;= F(4) + F(3) \implies (3 + 2) = 5 \\
+F(6) &amp;= F(5) + F(4) \implies (5 + 3) = 8 \\
+F(7) &amp;= F(6) + F(5) \implies (8 + 5) = 13 \\
+F(8) &amp;= F(7) + F(6) \implies (13 + 8) = 21 \\
+F(9) &amp;= F(8) + F(7) \implies (21 + 13) = 34 \\
+F(10) &amp;= F(9) + F(8) \implies (34 + 21) = 55
+\end{aligned}
+\]</span></p>
+</div>
+<div id="referências-1" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Referências:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>• BHARGAVA, A. Y. Entendendo algoritmos. São Paulo: Novatec, 2017.
+• CORMEN, T. H. Algoritmos – teoria e prática. São Paulo: LTC, 2012.
+• DASGUPTA, S.; PAPADIMITRIOU, C. H.; VAZIRANI, U. Algoritmos. São Paulo: McGraw-Hill, 2006.
+• MEDINA, M.; FERTIG, C. Algoritmos e programação – teoria e prática. São Paulo: Novatec, 2005. </code></pre>
+<hr />
+</div>
+</div>
+<div id="revisão-do-tema-algoritmos---execução" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Revisão do tema ALGORITMOS - EXECUÇÃO<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-algoritmos---execu%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="89%" />
+<col width="10%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Exercício 03 - Tomo 03 - Questão 06</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Leia o algoritmo a seguir.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><pre class="pseudocodigo"><code>Algoritmo MatrizENADE2008
+
+variaveis
+    M[0..2][0..3], I, J, C : inteiro
+
+inicio
+    C ← 0
+
+    // Preenchimento da matriz
+    para I ← 0 ate 2 passo 1 faca
+        para J ← 0 ate 3 passo 1 faca
+            C ← C + 1
+            M[I][J] ← C
+        fim para
+    fim para
+
+    // Reorganização (espelhamento)
+    para I ← 0 ate 2 passo 1 faca
+        para J ← 0 ate 3 passo 1 faca
+            C ← M[2 - I][3 - J]
+            M[I][J] ← C
+        fim para
+    fim para
+
+fim algoritmo</code></pre></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>Considerando a execução do algoritmo apresentada acima, faça o que se pede a seguir.</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Apresente os dados da matriz M ao término da execução da linha 10.</p></li>
+<li><p>Apresente os dados da matriz M ao término da execução da linha 15.</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div id="resolução-2" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> RESOLUÇÃO:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[
+\begin{array}{cc}
+&amp; \begin{matrix} \color{blue}{ 0} &amp; \color{blue}{ 1} &amp; \color{blue}{ 2} &amp; \color{blue}{ 3} \end{matrix} \\
+\begin{matrix} \color{red}{\scriptstyle 0} \\ \color{red}{\scriptstyle 1} \\ \color{red}{\scriptstyle 2} \end{matrix} &amp; \begin{bmatrix}
+\text{_} &amp; \text{_} &amp; \text{_} &amp; \text{_} \\
+\text{_} &amp; \text{_} &amp; \text{_} &amp; \text{_} \\
+\text{_} &amp; \text{_} &amp; \text{_} &amp; \text{_}
+\end{bmatrix}
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+\begin{array}{cc}
+&amp; \begin{matrix} \color{blue}{ 0} &amp; \color{blue}{ 1} &amp; \color{blue}{ 2} &amp; \color{blue}{ 3} \end{matrix} \\
+\begin{matrix} \color{red}{\scriptstyle 0} \\ \color{red}{\scriptstyle 1} \\ \color{red}{\scriptstyle 2} \end{matrix} &amp; \begin{bmatrix}
+\text{1} &amp; \text{2} &amp; \text{...} &amp; \text{...} \\
+\text{_} &amp; \text{_} &amp; \text{_} &amp; \text{_} \\
+\text{_} &amp; \text{_} &amp; \text{_} &amp; \text{_}
+\end{bmatrix}
+\end{array}
+\]</span></p>
+<p><img src="01-Semana-2026-02-24/media/03-questao-01.jpg" /></p>
+</div>
+<div id="referências-2" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Referências:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<hr />
+</div>
+</div>
+<div id="revisão-do-tema-algoritmos---busca-binária---dividir-para-conquistar." class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Revisão do tema ALGORITMOS - BUSCA BINÁRIA - “<strong>DIVIDIR PARA CONQUISTAR</strong>”.<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-algoritmos---busca-bin%C3%A1ria---dividir-para-conquistar." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Exercício 04 - Tomo 03 - Questão 07</strong></td>
+</tr>
+<tr class="even">
+<td>Leia o algoritmo a seguir.</td>
+</tr>
+<tr class="odd">
+<td><img src="01-Semana-2026-02-24/media/04-questao-01.jpg" /></td>
+</tr>
+<tr class="even">
+<td><p>O algoritmo representado pelo pseudocódigo acima está incompleto, pois faltam 3 linhas de código. <strong>A função busca</strong> desse algoritmo recebe um <strong>vetor ordenado de forma crescente</strong> e um <strong>valor a ser pesquisado</strong>. A partir disso, essa função <strong>verificará se o número armazenado no ponto mediano do vetor é o número procurado</strong>. Se for o número procurado, <strong>retornará o índice da posição do elemento no vetor e encerrará a busca</strong>. Se não for, a função <strong>segmentará o vetor em duas partes a partir do ponto mediano</strong>, escolherá o <strong>segmento no qual o valor procurado está inserido</strong>, e o <strong>processo se repetirá</strong>.</p>
+<p>A partir dessas informações, assinale a opção que contém os comandos que completam, respectivamente, as linhas 6, 8 e 12 do algoritmo.</p></td>
+</tr>
+<tr class="odd">
+<td><ol style="list-style-type: upper-alpha">
+<li></li>
+</ol>
+<pre><code>C ← 0
+M ← (C + F) / 2
+C ← M + 1</code></pre></td>
+</tr>
+<tr class="even">
+<td><ol start="2" style="list-style-type: upper-alpha">
+<li></li>
+</ol>
+<pre><code>C ← 1
+M ← (C + F) / 2
+C ← M - 1</code></pre></td>
+</tr>
+<tr class="odd">
+<td><ol start="3" style="list-style-type: upper-alpha">
+<li></li>
+</ol>
+<pre><code>C. C ← 0
+C ← M + 1
+M ← (C + F) / 2</code></pre></td>
+</tr>
+<tr class="even">
+<td><ol start="4" style="list-style-type: upper-alpha">
+<li></li>
+</ol>
+<pre><code>C ← 1
+C ← M + 1
+M ← (C + F) / 2</code></pre></td>
+</tr>
+<tr class="odd">
+<td><ol start="5" style="list-style-type: upper-alpha">
+<li></li>
+</ol>
+<pre><code>C ← 1
+M ← (C + F) / 2
+C ← M + 1</code></pre></td>
+</tr>
+</tbody>
+</table>
+<div id="resolução-3" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> RESOLUÇÃO:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O vetor é definido como <strong><code>V[0..9]</code></strong>.</p>
+<p>Como a variável <strong><code>F</code></strong> (Fim) foi inicializada com <strong><code>9</code></strong>, a variável <strong><code>C</code></strong> (Começo/Início) deve ser inicializada com o <strong><em>primeiro índice do vetor</em></strong>, que é <strong>0</strong>.</p>
+<pre class="pseudocode"><code>
+Comando: C ← 0</code></pre>
+<p>Dentro do laço <strong><code>enquanto</code></strong>, a primeira ação necessária para <strong>verificar o elemento central</strong> é <strong>calcular a média</strong> entre o <strong>início</strong> e o <strong>fim</strong> do segmento atual.</p>
+<pre class="pseudocode"><code>M ← (C + F) / 2</code></pre>
+<p>O bloco <strong><code>se ( K &lt; V[M] )</code></strong> trata o caso onde o <strong>valor procurado</strong> é <strong>menor</strong> que o <strong>centro</strong> (ajustando o fim <strong><code>F</code></strong>). O <strong><code>senao</code></strong> (linha 12) trata o caso onde o <strong>valor procurado</strong> é <strong>maior</strong> que o <strong>centro</strong>. Para isso, devemos “<strong>trazer</strong>” o <strong>início do vetor</strong> para <strong>logo após</strong> o <strong>ponto médio atual</strong>.</p>
+<pre class="pseudocode"><code>C ← M + 1</code></pre>
+<p>Portanto:</p>
+<pre class="pseudocode"><code>C ← 0
+
+M ← (C + F) / 2
+
+C ← M + 1</code></pre>
+<p><strong>Letra “A”</strong></p>
+</div>
+<div id="referências-3" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Referências:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<hr />
+</div>
+</div>
+<div id="section-1" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> </h2>
+<hr />
+</div>
+<div id="revisão-do-tema-recursividade-em-linguagens-de-programação-1" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Revisão do tema RECURSIVIDADE em linguagens de programação:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#revis%C3%A3o-do-tema-recursividade-em-linguagens-de-programa%C3%A7%C3%A3o-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Exercício 04 - Tomo 06 - Questão 03</strong></td>
+</tr>
+<tr class="even">
+<td><p>Leia o texto a seguir.</p>
+<p><em>Uma função é denominada recursiva quando ela é chamada novamente dentro de seu corpo. Implementações recursivas tendem a ser menos eficientes, porém facilitam a codificação e seu entendimento.</em></p></td>
+</tr>
+<tr class="odd">
+<td><div class="sourceCode" id="cb15"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb15-1"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-1" tabindex="-1"></a><span class="dt">int</span> f<span class="op">(</span><span class="dt">int</span> v<span class="op">[],</span> <span class="dt">int</span> n<span class="op">)</span></span>
+<span id="cb15-2"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-2" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb15-3"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-3" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb15-4"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-4" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb15-5"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-5" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb15-6"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-6" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb15-7"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-7" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb15-8"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-8" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb15-9"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-9" tabindex="-1"></a>        <span class="dt">int</span> s<span class="op">;</span></span>
+<span id="cb15-10"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-10" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-11" tabindex="-1"></a>        s <span class="op">=</span> f<span class="op">(</span>v<span class="op">,</span> n <span class="op">-</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb15-12"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-12" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-13" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>v<span class="op">[</span>n <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb15-14"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-14" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb15-15"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-15" tabindex="-1"></a>            s <span class="op">=</span> s <span class="op">+</span> v<span class="op">[</span>n <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb15-16"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-16" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb15-17"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-17" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-18" tabindex="-1"></a>        <span class="cf">return</span> s<span class="op">;</span></span>
+<span id="cb15-19"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-19" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb15-20"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb15-20" tabindex="-1"></a><span class="op">}</span></span></code></pre></div></td>
+</tr>
+<tr class="even">
+<td>Suponha que a função f() é acionada com os seguintes parâmetros de entrada:</td>
+</tr>
+<tr class="odd">
+<td>f( {2, -4, 7, 0, -1, 4}, 6);</td>
+</tr>
+<tr class="even">
+<td>Nesse caso, o valor de retorno da função f( ) será:</td>
+</tr>
+<tr class="odd">
+<td><ol style="list-style-type: upper-alpha">
+<li>) 8</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><ol start="2" style="list-style-type: upper-alpha">
+<li>) 10</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><ol start="3" style="list-style-type: upper-alpha">
+<li>) <strong>13</strong></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td><ol start="4" style="list-style-type: upper-alpha">
+<li>) 15</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><ol start="5" style="list-style-type: upper-alpha">
+<li>) 18</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<div id="resolução-4" class="section level3 hasAnchor" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> RESOLUÇÃO:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#resolu%C3%A7%C3%A3o-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Montando a função dentro de um programa C :</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb16-1"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb16-2"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-2" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-3" tabindex="-1"></a><span class="dt">int</span> f<span class="op">(</span><span class="dt">int</span> v<span class="op">[],</span> <span class="dt">int</span> n<span class="op">)</span></span>
+<span id="cb16-4"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-4" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb16-5"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-5" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb16-6"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-6" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb16-7"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-7" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb16-8"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-8" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-9"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-9" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb16-10"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-10" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb16-11"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-11" tabindex="-1"></a>        <span class="dt">int</span> s<span class="op">;</span></span>
+<span id="cb16-12"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-12" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-13" tabindex="-1"></a>        s <span class="op">=</span> f<span class="op">(</span>v<span class="op">,</span> n <span class="op">-</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb16-14"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-14" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-15" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>v<span class="op">[</span>n <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb16-16"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-16" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb16-17"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-17" tabindex="-1"></a>            s <span class="op">=</span> s <span class="op">+</span> v<span class="op">[</span>n <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb16-18"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-18" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb16-19"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-19" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-20" tabindex="-1"></a>        <span class="cf">return</span> s<span class="op">;</span></span>
+<span id="cb16-21"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-21" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-22"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-22" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb16-23"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-23" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-24" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb16-25"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-25" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb16-26"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-26" tabindex="-1"></a>    <span class="dt">int</span> v<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="dv">2</span><span class="op">,</span> <span class="op">-</span><span class="dv">4</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dv">4</span><span class="op">};</span></span>
+<span id="cb16-27"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-27" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> <span class="kw">sizeof</span><span class="op">(</span>v<span class="op">)</span> <span class="op">/</span> <span class="kw">sizeof</span><span class="op">(</span>v<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
+<span id="cb16-28"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-28" tabindex="-1"></a></span>
+<span id="cb16-29"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-29" tabindex="-1"></a>    <span class="dt">int</span> resultado <span class="op">=</span> f<span class="op">(</span>v<span class="op">,</span> n<span class="op">);</span></span>
+<span id="cb16-30"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-30" tabindex="-1"></a></span>
+<span id="cb16-31"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-31" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Soma dos positivos = </span><span class="sc">%d\n</span><span class="st">&quot;</span><span class="op">,</span> resultado<span class="op">);</span></span>
+<span id="cb16-32"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-32" tabindex="-1"></a></span>
+<span id="cb16-33"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-33" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb16-34"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb16-34" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<div id="melhorando-o-nome-das-variáveis-para-deixar-mais-didático" class="section level4 hasAnchor" number="1.6.1.1">
+<h4><span class="header-section-number">1.6.1.1</span> Melhorando o nome das variáveis para deixar mais didático:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#melhorando-o-nome-das-vari%C3%A1veis-para-deixar-mais-did%C3%A1tico" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb17"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb17-1"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb17-2"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-2" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-3" tabindex="-1"></a><span class="dt">int</span> f<span class="op">(</span><span class="dt">int</span> vetor<span class="op">[],</span> <span class="dt">int</span> contador<span class="op">)</span>  <span class="co">// &lt;== Função do exercício</span></span>
+<span id="cb17-4"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-4" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb17-5"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-5" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>contador <span class="op">==</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb17-6"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-6" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb17-7"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-7" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb17-8"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-8" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-9"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-9" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb17-10"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-10" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb17-11"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-11" tabindex="-1"></a>        <span class="dt">int</span> resposta<span class="op">;</span></span>
+<span id="cb17-12"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-12" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-13" tabindex="-1"></a>        resposta <span class="op">=</span> f<span class="op">(</span>vetor<span class="op">,</span> contador <span class="op">-</span> <span class="dv">1</span><span class="op">);</span> <span class="co">// &lt;== Função do exercício</span></span>
+<span id="cb17-14"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-14" tabindex="-1"></a></span>
+<span id="cb17-15"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-15" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>vetor<span class="op">[</span>contador <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb17-16"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-16" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb17-17"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-17" tabindex="-1"></a>            resposta <span class="op">=</span> resposta <span class="op">+</span> vetor<span class="op">[</span>contador <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb17-18"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-18" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb17-19"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-19" tabindex="-1"></a></span>
+<span id="cb17-20"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-20" tabindex="-1"></a>        <span class="cf">return</span> resposta<span class="op">;</span></span>
+<span id="cb17-21"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-21" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-22"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-22" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb17-23"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-23" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-24" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb17-25"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-25" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb17-26"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-26" tabindex="-1"></a>    <span class="dt">int</span> vetor<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="dv">2</span><span class="op">,</span> <span class="op">-</span><span class="dv">4</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dv">4</span><span class="op">};</span></span>
+<span id="cb17-27"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-27" tabindex="-1"></a>    </span>
+<span id="cb17-28"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-28" tabindex="-1"></a>    <span class="co">// descobre o tamanho do contador pelo tamanho do vetor</span></span>
+<span id="cb17-29"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-29" tabindex="-1"></a>    <span class="dt">int</span> contador <span class="op">=</span> <span class="kw">sizeof</span><span class="op">(</span>vetor<span class="op">)</span> <span class="op">/</span> <span class="kw">sizeof</span><span class="op">(</span>vetor<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
+<span id="cb17-30"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-30" tabindex="-1"></a></span>
+<span id="cb17-31"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-31" tabindex="-1"></a>    <span class="dt">int</span> resultado <span class="op">=</span> f<span class="op">(</span>vetor<span class="op">,</span> contador<span class="op">);</span></span>
+<span id="cb17-32"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-32" tabindex="-1"></a></span>
+<span id="cb17-33"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-33" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Soma dos positivos = </span><span class="sc">%d</span><span class="er">\c</span><span class="st">ontador&quot;</span><span class="op">,</span> resultado<span class="op">);</span></span>
+<span id="cb17-34"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-34" tabindex="-1"></a></span>
+<span id="cb17-35"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-35" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb17-36"><a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#cb17-36" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Uma função recursiva <strong>chama a sí mesma</strong>. Ao fazer isso, em C/C++, ela <strong>cria na pilha</strong> (parte “organizada” da memória) <strong>várias cópias de espaço de memória dela mesma</strong> para <strong>computar o cálculo em seguida</strong>. Cada cópia existente guarda um “<strong>momento</strong>” (estado) <strong>de desenvolvimento do cálculo do algoritmo da função</strong>.</p>
+<p>Ao final dessa <strong>expansão de sí mesma</strong>, a função recursiva <strong>“revisita” toda a memória executando o cálculo</strong>.</p>
+<p>Cada <strong>replicação de memória na pilha que computa o cálculo tem seu espaço de memória liberado assim que o cálculo é computado</strong>.</p>
+<p>A pilha (stack) é uma beleza !!</p>
+<p>No final, o <strong>resultado é entregue (retornado) pela função</strong>.</p>
+<p>Demonstração:</p>
+<p>Rodar o código no PyTutor:</p>
+<p><a href="https://pythontutor.com/visualize.html#mode=edit" class="uri">https://pythontutor.com/visualize.html#mode=edit</a></p>
+</div>
+</div>
+<div id="referências-4" class="section level3 hasAnchor" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Referências:<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html#refer%C3%AAncias-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<hr />
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="revisão-temas-específicos-ads-banco-de-dados.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/miguel7penteado/2026-1sem-ADS-Revisao/edit/main/01-revisao-01-2026-02-24.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["2026-ADS-1Sem-Revisao.pdf", "2026-ADS-1Sem-Revisao.epub", "2026-ADS-1Sem-Revisao.word", "2026-ADS-1Sem-Revisao.html"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

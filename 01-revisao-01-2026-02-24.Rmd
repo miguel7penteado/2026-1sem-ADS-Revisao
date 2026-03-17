@@ -5,7 +5,7 @@ output:
     theme: cerulean
 ---
 
-# REVISÃO TEMAS ESPECÍFICOS ADS
+# REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária
 
 #### 24/02/2026 {.unnumbered}
 
@@ -35,29 +35,29 @@ output:
 
 Máquinas Virtuais são ambientes de memória e processamento criados por um software chamado **hypervisor**:
 
-+-----------------------------------------+---------------------------------------------------------------+
-| ![](media/01-questao-01-hypervisor.jpg) | O que faz um hipervisor ?                                     |
-|                                         |                                                               |
-|                                         | 1.  Criar máquinas virtuais (VMs);                            |
-|                                         |                                                               |
-|                                         | 2.  Gerenciar CPU, memória, disco e rede ;                    |
-|                                         |                                                               |
-|                                         | 3.  Isolar os sistemas operacionais convidado ;               |
-|                                         |                                                               |
-|                                         | 4.  Intermediar o acesso ao hardware físico;                  |
-|                                         |                                                               |
-|                                         |     Tipos de hipervisores:                                    |
-|                                         |                                                               |
-|                                         |     Tipo 1 - Roda diretamente no Hardware;                    |
-|                                         |                                                               |
-|                                         |     Tipo 2 - Roda hospedado um sistema operacional anfitrião; |
-+-----------------------------------------+---------------------------------------------------------------+
++--------------------------------------------------------------+---------------------------------------------------------------+
+| ![](01-Semana-2026-02-24/media/01-questao-01-hypervisor.jpg) | O que faz um hipervisor ?                                     |
+|                                                              |                                                               |
+|                                                              | 1.  Criar máquinas virtuais (VMs);                            |
+|                                                              |                                                               |
+|                                                              | 2.  Gerenciar CPU, memória, disco e rede ;                    |
+|                                                              |                                                               |
+|                                                              | 3.  Isolar os sistemas operacionais convidado ;               |
+|                                                              |                                                               |
+|                                                              | 4.  Intermediar o acesso ao hardware físico;                  |
+|                                                              |                                                               |
+|                                                              |     Tipos de hipervisores:                                    |
+|                                                              |                                                               |
+|                                                              |     Tipo 1 - Roda diretamente no Hardware;                    |
+|                                                              |                                                               |
+|                                                              |     Tipo 2 - Roda hospedado um sistema operacional anfitrião; |
++--------------------------------------------------------------+---------------------------------------------------------------+
 
 ### "Loteamento" de Recursos: Processador, Memória e Armazenamento
 
 Para cada máquina virtual criada, o sistema operacional anfitrião compartilha recursos com a máquina virtual criada pelo hypervisor e o sistema operacional hospedeiro de cada máquina virtual.
 
-![](media/01-questao-01-hypervisor-02.jpg)
+![](01-Semana-2026-02-24/media/01-questao-01-hypervisor-02.jpg)
 
 ### Referências:
 
@@ -74,6 +74,8 @@ Para cada máquina virtual criada, o sistema operacional anfitrião compartilha 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Exercício 02 - Tomo 02 - questão 03                                                                                                                                                                         |
 +=============================================================================================================================================================================================================+
+| ![](01-Semana-2026-02-24/media/02-Fibonacci.jpg)                                                                                                                                                            |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Os termos da sequência de Fibonacci são definidos por:                                                                                                                                                      |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``` pseudocode                                                                                                                                                                                              |
@@ -157,41 +159,45 @@ $$
 
 ## Revisão do tema ALGORITMOS - EXECUÇÃO
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-| **Exercício 03 - Tomo 03 - Questão 06**                                                                                                                                                                                                      |         |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-| Leia o algoritmo a seguir.                                                                                                                                                                                                                   |         |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-| ``` pseudocodigo                                                                                                                                                                                                                             |         |
-| Algoritmo MatrizENADE2008                                                                                                                                                                                                                    |         |
-|                                                                                                                                                                                                                                              |         |
-| variaveis                                                                                                                                                                                                                                    |         |
-|     M[0..2][0..3], I, J, C : inteiro                                                                                                                                                                                                         |         |
-|                                                                                                                                                                                                                                              |         |
-| inicio                                                                                                                                                                                                                                       |         |
-|     C ← 0                                                                                                                                                                                                                                    |         |
-|                                                                                                                                                                                                                                              |         |
-|     // Preenchimento da matriz                                                                                                                                                                                                               |         |
-|     para I ← 0 ate 2 passo 1 faca                                                                                                                                                                                                            |         |
-|         para J ← 0 ate 3 passo 1 faca                                                                                                                                                                                                        |         |
-|             C ← C + 1                                                                                                                                                                                                                        |         |
-|             M[I][J] ← C                                                                                                                                                                                                                      |         |
-|         fim para                                                                                                                                                                                                                             |         |
-|     fim para                                                                                                                                                                                                                                 |         |
-|                                                                                                                                                                                                                                              |         |
-|     // Reorganização (espelhamento)                                                                                                                                                                                                          |         |
-|     para I ← 0 ate 2 passo 1 faca                                                                                                                                                                                                            |         |
-|         para J ← 0 ate 3 passo 1 faca                                                                                                                                                                                                        |         |
-|             C ← M[2 - I][3 - J]                                                                                                                                                                                                              |         |
-|             M[I][J] ← C                                                                                                                                                                                                                      |         |
-|         fim para                                                                                                                                                                                                                             |         |
-|     fim para                                                                                                                                                                                                                                 |         |
-|                                                                                                                                                                                                                                              |         |
-| fim algoritmo                                                                                                                                                                                                                                |         |
-| ```                                                                                                                                                                                                                                          |         |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-| Considerando a execução do algoritmo apresentada acima, faça o que se pede a seguir. \| \| A) Apresente os dados da matriz M ao término da execução da linha 10. \| B) Apresente os dados da matriz M ao término da execução da linha 15. \| |         |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------+---------+
+| **Exercício 03 - Tomo 03 - Questão 06**                                               |         |
++---------------------------------------------------------------------------------------+---------+
+| Leia o algoritmo a seguir.                                                            |         |
++---------------------------------------------------------------------------------------+---------+
+| ``` pseudocodigo                                                                      |         |
+| Algoritmo MatrizENADE2008                                                             |         |
+|                                                                                       |         |
+| variaveis                                                                             |         |
+|     M[0..2][0..3], I, J, C : inteiro                                                  |         |
+|                                                                                       |         |
+| inicio                                                                                |         |
+|     C ← 0                                                                             |         |
+|                                                                                       |         |
+|     // Preenchimento da matriz                                                        |         |
+|     para I ← 0 ate 2 passo 1 faca                                                     |         |
+|         para J ← 0 ate 3 passo 1 faca                                                 |         |
+|             C ← C + 1                                                                 |         |
+|             M[I][J] ← C                                                               |         |
+|         fim para                                                                      |         |
+|     fim para                                                                          |         |
+|                                                                                       |         |
+|     // Reorganização (espelhamento)                                                   |         |
+|     para I ← 0 ate 2 passo 1 faca                                                     |         |
+|         para J ← 0 ate 3 passo 1 faca                                                 |         |
+|             C ← M[2 - I][3 - J]                                                       |         |
+|             M[I][J] ← C                                                               |         |
+|         fim para                                                                      |         |
+|     fim para                                                                          |         |
+|                                                                                       |         |
+| fim algoritmo                                                                         |         |
+| ```                                                                                   |         |
++---------------------------------------------------------------------------------------+---------+
+| Considerando a execução do algoritmo apresentada acima, faça o que se pede a seguir.  |         |
+|                                                                                       |         |
+| A) Apresente os dados da matriz M ao término da execução da linha 10.                 |         |
+|                                                                                       |         |
+| B) Apresente os dados da matriz M ao término da execução da linha 15.                 |         |
++---------------------------------------------------------------------------------------+---------+
 
 ### RESOLUÇÃO:
 
@@ -217,6 +223,8 @@ $$
 \end{array}
 $$
 
+![](01-Semana-2026-02-24/media/03-questao-01.jpg)
+
 ### Referências:
 
 ------------------------------------------------------------------------
@@ -228,7 +236,7 @@ $$
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Leia o algoritmo a seguir.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ![](media/04-questao-01.jpg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ![](01-Semana-2026-02-24/media/04-questao-01.jpg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | O algoritmo representado pelo pseudocódigo acima está incompleto, pois faltam 3 linhas de código. **A função busca** desse algoritmo recebe um **vetor ordenado de forma crescente** e um **valor a ser pesquisado**. A partir disso, essa função **verificará se o número armazenado no ponto mediano do vetor é o número procurado**. Se for o número procurado, **retornará o índice da posição do elemento no vetor e encerrará a busca**. Se não for, a função **segmentará o vetor em duas partes a partir do ponto mediano**, escolherá o **segmento no qual o valor procurado está inserido**, e o **processo se repetirá**. |
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -437,8 +445,8 @@ int f(int vetor[], int contador)  // <== Função do exercício
 int main()
 {
     int vetor[] = {2, -4, 7, 0, -1, 4};
-	
-	// descobre o tamanho do contador pelo tamanho do vetor
+    
+    // descobre o tamanho do contador pelo tamanho do vetor
     int contador = sizeof(vetor) / sizeof(vetor[0]);
 
     int resultado = f(vetor, contador);
