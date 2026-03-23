@@ -1,15 +1,123 @@
-# Footnotes and citations 
-
-## Footnotes
-
-Footnotes are put inside the square brackets after a caret `^[]`. Like this one ^[This is a footnote.]. 
-
-## Citations
-
-Reference items in your bibliography file(s) using `@key`.
-
-For example, we are using the **bookdown** package [@R-bookdown] (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and **knitr** [@xie2015] (this citation was added manually in an external file book.bib). 
-Note that the `.bib` files need to be listed in the index.Rmd with the YAML `bibliography` key.
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    css: style.css
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
 
 
-The RStudio Visual Markdown Editor can also make it easier to insert citations: <https://rstudio.github.io/visual-markdown-editing/#/citations>
+# REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS
+
+#### 17/03/2026 {.unnumbered}
+
+#### Professor Miguél Suares {.unnumbered}
+
+## Questão 7.1
+
+No cenário de uma economia globalizada, cresce o interesse pelo empreendedorismo
+e pela busca de meios que levem a uma maior produtividade, competitividade e 
+inovação. Os avanços das tecnologias da informação e comunicação (TIC) auxiliam 
+esse crescimento. Atualmente, uma parcela significativa dos negócios tem uma 
+dependência forte das TIC.
+
+Desse modo, manter a disponibilidade da informação e comunicação e manter os 
+negócios operando, sem qualquer paralisação, é indispensável. Porém, é preciso 
+analisar o que pode ser afetado, qual o impacto financeiro e quais os impactos 
+na imagem e na reputação da empresa, se cada um dos processos de negócio 
+sofresse uma paralisação por conta da TIC.
+
+A fim de mitigar possíveis riscos, é recomendável documentar um plano para 
+eliminar ou reduzir a possibilidade de ocorrer cenários de indisponibilidade da 
+TIC. Nessa situação, é preciso elaborar um:
+
+- (A) plano de negócio.  
+- (B) documento de visão.  
+- (C) plano de contingência.  
+- (D) plano de gerência de riscos.  
+- (E) plano de gerenciamento de projetos.  
+
+
+## Questão 8.2
+
+O gerenciamento de projetos de sistemas é essencial para a engenharia de 
+software. Um mau gerenciamento acarreta atraso na entrega do programa, custo 
+maior do que o programado e falha no atendimento de requisitos.
+
+O quadro a seguir representa atividades de um projeto:
+
+| Tarefa | Duração (dias) | Dependências |
+|--------|---------------|-------------|
+| T1     | 5             | -           |
+| T2     | 8             | T1          |
+| T3     | 2             | T2          |
+| T4     | 4             | -           |
+| T5     | 2             | T3, T4      |
+| T6     | 4             | -           |
+| T7     | 3             | T5          |
+
+Com base na análise do quadro, o tempo mínimo necessário para terminar o projeto
+é de:
+
+- (A) 13 dias  
+- (B) 15 dias  
+- (C) 16 dias  
+- (D) 20 dias  
+- (E) 28 dias  
+
+
+## Questão 8.7
+
+Os termos inovação e empreendedorismo dizem respeito à prática da gestão e à 
+mudança criativa. A inovação preocupa-se, sobretudo, com o desenvolvimento de 
+produtos, já o empreendedorismo dedica-se mais à questão da criação de pequenas 
+empresas.
+
+Nesse contexto, avalie as afirmativas a seguir:
+
+I. Inovação e sustentabilidade são processos antagônicos, já que a inovação 
+contribui para a degradação ambiental.  
+
+II. A exploração de um problema social transformado em oportunidade de negócio 
+visando lucro é objetivo do empreendedorismo social.  
+
+III. Nem todo resultado de um processo criativo está associado a uma inovação.  
+
+É correto o que se afirma em:
+
+- (A) I, apenas  
+- (B) II, apenas  
+- (C) I e III, apenas  
+- (D) II e III, apenas  
+- (E) I, II e III  
+
+
+
+
+### Respostas
+
+7.1 **Alternativa correta: (C)**
+8.2 **Alternativa correta: (D)**
+8.7 **Alternativa correta: (D)**
+
+### Comentário 8.2
+
+O caminho crítico é: **T1 → T2 → T3 → T5 → T7**, totalizando:
+
+`5 + 8 + 2 + 2 + 3 = 20 dias`
+
+
+
+
+
+
+```{r 04-impressao-01-html, eval=FALSE, include=FALSE}
+rmarkdown::render("04-revisao-04-2026-03-17.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 04-impressao-02-docx, eval=FALSE, include=FALSE}
+rmarkdown::render("04-revisao-04-2026-03-17.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

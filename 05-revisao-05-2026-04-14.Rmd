@@ -1,30 +1,111 @@
-# Blocks
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    css: style.css
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
 
-## Equations
+# REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS
 
-Here is an equation.
+#### 14/04/2026 {.unnumbered}
 
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  (\#eq:binom)
-\end{equation} 
-
-You may refer to using `\@ref(eq:binom)`, like see Equation \@ref(eq:binom).
-
-
-## Theorems and proofs
-
-Labeled theorems can be referenced in text using `\@ref(thm:tri)`, for example, check out this smart theorem \@ref(thm:tri).
-
-::: {.theorem #tri}
-For a right triangle, if $c$ denotes the *length* of the hypotenuse
-and $a$ and $b$ denote the lengths of the **other** two sides, we have
-$$a^2 + b^2 = c^2$$
-:::
-
-Read more here <https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html>.
-
-## Callout blocks
+#### Professor Miguél Suares {.unnumbered}
 
 
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html
+## Questão 9.6
+
+Após a implantação de um sistema em ambiente de produção, ele passa para a fase 
+de manutenção dentro do ciclo de vida do desenvolvimento de software.
+
+Considerando a etapa de manutenção no processo de desenvolvimento de software, 
+avalie as afirmativas:
+
+I. A fase de manutenção é uma parte explícita do modelo em cascata.  
+II. A atualização do sistema para inserir customizações é considerada manutenção.  
+III. A depuração do programa é exclusiva da fase de desenvolvimento.  
+IV. O acréscimo de novas funções sem afetar a operação é um tipo de manutenção.  
+V. A manutenção está relacionada ao aumento do ciclo de vida do software.  
+
+É correto apenas o que se afirma em:
+
+- (A) I e III  
+- (B) IV e V  
+- (C) I, II e III  
+- (D) I, II, IV e V  
+- (E) II, III, IV e V  
+
+
+
+## Questão 9.7
+
+As redes de computadores estão por toda parte e compartilham recursos por meio de sistemas distribuídos.
+
+Assinale a opção que apresenta exemplos atuais de sistemas distribuídos:
+
+- (A) Pesquisa na web, jogos on-line, e-commerce e o banco de dados das agências bancárias  
+- (B) Jogos on-line, e-commerce, pesquisa no Windows e e-mails  
+- (C) E-commerce, jogos em mídia física, pesquisa no Windows e redes sociais  
+- (D) Pesquisa na web, jogos em mídia física, e-commerce e e-mails  
+- (E) Pesquisa no Windows, pesquisa na web, jogos on-line e banco de dados bancários  
+
+
+## Questão 9.9
+
+O método do caminho crítico identifica a sequência de atividades a que o gerente
+de projetos deve dar mais atenção, porque, caso uma delas atrase, todo o projeto
+estará atrasado.
+
+A tabela a seguir apresenta a estrutura de atividades de um projeto:
+
+| Atividade | Predecessora | Duração (dias) |
+|----------|--------------|----------------|
+| A        | --           | 3              |
+| B        | A            | 5              |
+| C        | --           | 12             |
+| D        | --           | 4              |
+| E        | D            | 2              |
+| F        | D            | 5              |
+| G        | F            | 7              |
+| H        | E, G         | 8              |
+| I        | B            | 11             |
+| J        | C, H, I      | 3              |
+
+Com base nas informações apresentadas na tabela, avalie as afirmativas:
+
+I. O caminho crítico é composto pelas atividades A, B, I e J.  
+
+II. O caminho crítico tem 27 dias.  
+
+III. A atividade H faz parte do caminho crítico.  
+
+IV. O projeto possui dois caminhos críticos.  
+
+É correto apenas o que se afirma em:
+
+- (A) I e II  
+- (B) I e IV  
+- (C) II e III  
+- (D) I, III e IV  
+- (E) II, III e IV  
+
+### Respostas
+
+9.6 **Alternativa correta: (D)**
+9.7 **Alternativa correta: (A)**
+9.9 **Alternativa correta: (C)**
+
+
+
+
+
+```{r 05-impressao-01-html, eval=FALSE, include=FALSE}
+rmarkdown::render("05-revisao-05-2026-04-14.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 05-impressao-02-docx, eval=FALSE, include=FALSE}
+rmarkdown::render("05-revisao-05-2026-04-14.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

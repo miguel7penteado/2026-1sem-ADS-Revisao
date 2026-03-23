@@ -3,7 +3,12 @@ output:
   html_document: 
     highlight: tango
     theme: cerulean
+    css: style.css
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
+
 
 # REVISÃO TEMAS ESPECÍFICOS ADS - Virtualização, Recursividade, Busca Binária
 
@@ -477,10 +482,10 @@ Rodar o código no PyTutor:
 
 ------------------------------------------------------------------------
 
-```{r 01-impressao-01, eval=FALSE, include=FALSE}
+```{r 01-impressao-01-html, eval=FALSE, include=FALSE}
 rmarkdown::render("01-revisao-01-2026-02-24.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
 ```
 
-```{r 01-impressao-02, eval=FALSE, include=FALSE}
+```{r 01-impressao-01-docx, eval=FALSE, include=FALSE}
 rmarkdown::render("01-revisao-01-2026-02-24.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
 ```

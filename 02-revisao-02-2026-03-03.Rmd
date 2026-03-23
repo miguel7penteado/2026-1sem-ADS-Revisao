@@ -3,6 +3,7 @@ output:
   html_document: 
     highlight: tango
     theme: cerulean
+    css: style.css
 editor_options: 
   markdown: 
     wrap: sentence
@@ -142,13 +143,19 @@ Com base no diálogo e no diagrama apresentados, avalie as afirmativas:
 
 ### Afirmativas
 
-- I. O Chicó e a velha poderão ser cadastrados na entidade pessoa.
+-   I. O Chicó e a velha poderão ser cadastrados na entidade pessoa.
 
-- II. O Chicó e a velha poderão ter mais que um cavalo cadastrado.
+-   
 
-- III. O atributo rg da entidade pessoa pode ter a função de chave primária nessa entidade.
+    II. O Chicó e a velha poderão ter mais que um cavalo cadastrado.
 
-- IV. O cavalo deverá ter no mínimo uma pessoa e uma pessoa poderá ser cadastrada sem a necessidade de ter um cavalo.
+-   
+
+    III. O atributo rg da entidade pessoa pode ter a função de chave primária nessa entidade.
+
+-   
+
+    IV. O cavalo deverá ter no mínimo uma pessoa e uma pessoa poderá ser cadastrada sem a necessidade de ter um cavalo.
 
 ------------------------------------------------------------------------
 
@@ -172,3 +179,15 @@ E. II, III e IV.
 |---------|----------|
 | 3       | **C**    |
 | 4       | **B**    |
+
+
+
+
+```{r 02-impressao-01-html, eval=FALSE, include=FALSE}
+rmarkdown::render("02-revisao-02-2026-03-03.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 02-impressao-02-docx, eval=FALSE, include=FALSE}
+rmarkdown::render("02-revisao-02-2026-03-03.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```
+

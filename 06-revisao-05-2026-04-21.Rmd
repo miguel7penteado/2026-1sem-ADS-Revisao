@@ -1,31 +1,105 @@
-# Sharing your book
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    css: style.css
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
 
-## Publishing
+# REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS
 
-HTML books can be published online, see: https://bookdown.org/yihui/bookdown/publishing.html
+#### 21/04/2026 {.unnumbered}
 
-## 404 pages
-
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a `_404.Rmd` or `_404.md` file to your project root and use code and/or Markdown syntax.
-
-## Metadata for sharing
-
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the `index.Rmd` YAML. To setup, set the `url` for your book and the path to your `cover-image` file. Your book's `title` and `description` are also used.
+#### Professor Miguél Suares {.unnumbered}
 
 
+## Questão 10.3
 
-This `gitbook` uses the same social sharing data across all chapters in your book- all links shared will look the same.
+Um desenvolvedor de software recém-formado foi contratado para a implementação 
+de um projeto em uma empresa e recebeu explicações sobre o funcionamento da 
+gerência de configuração.
 
-Specify your book's source repository on GitHub using the `edit` key under the configuration options in the `_output.yml` file, which allows users to suggest an edit by linking to a chapter's source file. 
+Considerando essa situação, avalie as afirmativas:
 
-Read more about the features of this output format here:
+I. Para acessar a base de desenvolvimento, deve-se realizar um *checkout* para 
+obter os arquivos do servidor.  
 
-https://pkgs.rstudio.com/bookdown/reference/gitbook.html
+II. Em caso de conflito entre versões, deve-se realizar uma operação de 
+*tag (release)* para resolução.  
 
-Or use:
+III. Ao desenvolver um novo caso de uso que altera vários arquivos, recomenda-se
+criar uma *branch*.  
 
-```{r eval=FALSE}
-?bookdown::gitbook
+IV. A versão estável é o ramo principal de desenvolvimento continuamente 
+atualizado.  
+
+É correto apenas o que se afirma em:
+
+- (A) I e II  
+- (B) I e III  
+- (C) II e IV  
+- (D) I, III e IV  
+- (E) II, III e IV  
+
+
+## Questão 12.1
+
+Uma empresa da indústria farmacêutica está implantando um data warehouse. Dois 
+sistemas transacionais utilizam representações diferentes para o sexo dos 
+usuários ("m/f" e "1/2").
+
+Sabendo que os dados alimentarão o data warehouse, avalie as afirmativas:
+
+I. Deve-se definir um padrão e utilizar ETL para adequar os dados.  
+
+II. Deve-se armazenar na tabela fato a sigla do sistema de origem.  
+
+III. Deve-se solicitar aos fornecedores a padronização dos dados.  
+
+É correto o que se afirma em:
+
+- (A) I, apenas  
+- (B) II, apenas  
+- (C) I e III  
+- (D) II e III  
+- (E) I, II e III  
+
+
+## Questão 12.2
+
+Considere o protocolo TCP/IP, responsável pela comunicação em redes.
+
+Avalie as afirmativas:
+
+I. Protocolos são programas responsáveis pelo armazenamento de dados.  
+
+II. Sistemas diferentes podem se comunicar por meio do TCP/IP.  
+
+III. TCP controla a comunicação e IP realiza o endereçamento.  
+
+É correto o que se afirma em:
+
+- (A) I, apenas  
+- (B) II, apenas  
+- (C) I e III  
+- (D) II e III  
+- (E) I, II e III  
+
+### Respostas
+
+10.3 **Alternativa correta: (B)**
+12.1 **Alternativa correta: (A)**
+12.2 **Alternativa correta: (D)**
+
+
+
+```{r 06-impressao-01-html, eval=FALSE, include=FALSE}
+rmarkdown::render("06-revisao-05-2026-04-21.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
 ```
 
-
+```{r 06-impressao-02-docx, eval=FALSE, include=FALSE}
+rmarkdown::render("06-revisao-05-2026-04-21.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

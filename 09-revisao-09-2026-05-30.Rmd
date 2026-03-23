@@ -1,0 +1,25 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    css: style.css
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+# REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS
+
+#### 30/05/2026 {.unnumbered}
+
+#### Professor Miguél Suares {.unnumbered}
+
+
+```{r 09-impressao-01-html, eval=FALSE, include=FALSE}
+rmarkdown::render("09-revisao-09-2026-05-30.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 09-impressao-02-docx, eval=FALSE, include=FALSE}
+rmarkdown::render("09-revisao-09-2026-05-30.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

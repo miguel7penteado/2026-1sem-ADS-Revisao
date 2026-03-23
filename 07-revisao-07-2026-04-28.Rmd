@@ -1,3 +1,94 @@
-`r if (knitr::is_html_output()) '
-# References {-}
-'`
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    css: style.css
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+# REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS
+
+#### 28/04/2026 {.unnumbered}
+
+#### Professor Miguél Suares {.unnumbered}
+
+## Questão 12.5
+
+O diagrama a seguir, em notação BPMN, representa o processo de aquisição de matéria-prima de uma indústria.
+
+Com base no processo, avalie as afirmativas:
+
+I. O abastecimento do estoque e a autorização do pagamento dependem da aprovação da matéria-prima.  
+
+II. A autorização do pagamento ocorre somente após a distribuição da matéria-prima.  
+
+III. O diagrama apresenta cinco pontos de decisão.  
+
+IV. A nota fiscal é recebida com a matéria-prima e enviada ao financeiro após aprovação.  
+
+V. O processo poderia ser otimizado com cadastro de fornecedores homologados.  
+
+É correto apenas o que se afirma em:
+
+- (A) I, II e III  
+- (B) I, III e IV  
+- (C) I, IV e V  
+- (D) II, III e V  
+- (E) II, IV e V  
+
+
+
+
+## Questão 12.8
+
+O uso de BPM visa à melhoria contínua dos processos organizacionais.
+
+Avalie as afirmativas sobre ferramentas de apoio ao BPM:
+
+I. SOA contribui para adaptação dos sistemas aos requisitos de BPM.  
+
+II. É necessário acesso ao código-fonte para implementar BPM.  
+
+III. BAM é utilizado para modelagem de processos e gerenciamento de dados.  
+
+IV. BPMS permite gerar aplicações e executar processos de negócio.  
+
+É correto apenas o que se afirma em:
+
+- (A) I e II  
+- (B) I e IV  
+- (C) III e IV  
+- (D) I, II e III  
+- (E) II, III e IV  
+
+
+## Questão 12.9
+
+Uma empresa processa cerca de 10.000 notas fiscais por mês e precisa integrar dados entre os sistemas de contas a receber e contabilidade, evitando retrabalho manual.
+
+A solução mais adequada para esse problema é:
+
+- (A) Data warehouse  
+- (B) SOA (Service Oriented Architecture)  
+- (C) ERP (Enterprise Resource Planning)  
+- (D) GED (Gestão Eletrônica de Documentos)  
+- (E) Gestão do conhecimento  
+
+
+### Respostas
+
+12.5 **Alternativa correta: (C)**
+12.8 **Alternativa correta: (B)**
+12.9 **Alternativa correta: (C)**
+
+
+```{r 07-impressao-01-html, eval=FALSE, include=FALSE}
+rmarkdown::render("07-revisao-07-2026-04-28.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 07-impressao-02-docx, eval=FALSE, include=FALSE}
+rmarkdown::render("07-revisao-07-2026-04-28.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```
