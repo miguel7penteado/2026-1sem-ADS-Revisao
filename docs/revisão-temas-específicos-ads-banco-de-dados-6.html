@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas</title>
-  <meta name="description" content="Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <title>Capítulo 8 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas</title>
+  <meta name="description" content="Capítulo 8 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
   <meta name="generator" content="bookdown 0.46.2 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <meta property="og:title" content="Capítulo 8 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
   
   <meta name="github-repo" content="miguel7penteado/2026-1sem-ADS-Revisao" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <meta name="twitter:title" content="Capítulo 8 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
   
   
   <meta name="twitter:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"/>
-<link rel="next" href="revisão-temas-específicos-ads-banco-de-dados-1.html"/>
+<link rel="prev" href="revisão-temas-específicos-ads-banco-de-dados-5.html"/>
+<link rel="next" href="revisão-temas-específicos-ads-banco-de-dados-7.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -278,288 +278,227 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="revisão-temas-específicos-ads-banco-de-dados" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Capítulo 2</span> REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS<a href="revisão-temas-específicos-ads-banco-de-dados.html#revis%C3%A3o-temas-espec%C3%ADficos-ads-banco-de-dados" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="section-2" class="section level4 unnumbered hasAnchor">
-<h4>03/03/2026<a href="revisão-temas-específicos-ads-banco-de-dados.html#section-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="revisão-temas-específicos-ads-banco-de-dados-6" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Capítulo 8</span> REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#revis%C3%A3o-temas-espec%C3%ADficos-ads-banco-de-dados-6" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="section-8" class="section level4 unnumbered hasAnchor">
+<h4>05/05/2026<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#section-8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="professor-miguél-suares-1" class="section level4 unnumbered hasAnchor">
-<h4>Professor Miguél Suares<a href="revisão-temas-específicos-ads-banco-de-dados.html#professor-migu%C3%A9l-suares-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<hr />
+<div id="professor-miguél-suares-7" class="section level4 unnumbered hasAnchor">
+<h4>Professor Miguél Suares<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#professor-migu%C3%A9l-suares-7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="questão-3" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Questão 3<a href="revisão-temas-específicos-ads-banco-de-dados.html#quest%C3%A3o-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="02-Semana-2026-03-03/media/03-questao-01.jpg" /></p>
-<p>Um cliente solicitou a uma empresa a criação de um banco de dados para armazenar o resultado de uma eleição presidencial, com dados sobre os partidos políticos, os candidatos e a votação obtida por cada candidato em cada unidade da federação.</p>
-<p>As tabelas a seguir contêm os dados registrados a partir do resultado dessa eleição.</p>
-<div id="tabela-partido" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> 🧾 Tabela: Partido<a href="#tabela-partido" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questão-3.1" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Questão 3.1<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#quest%C3%A3o-3.1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Uma livraria usa um sistema informatizado para realizar vendas pela Internet.
+Optou-se por um sistema gerenciador de banco de dados, no qual aplicaram-se regras de corretude e integridade.
+Cada cliente se cadastra, faz login no sistema e escolhe títulos, que são colocados em um carrinho de compras até a confirmação do pedido.</p>
 <table>
 <thead>
 <tr class="header">
-<th>Número</th>
-<th>Nome</th>
-<th>Sigla</th>
+<th align="center">Cliente</th>
+<th>Livro</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>91</td>
-<td>Partido 1</td>
-<td>P1</td>
+<td align="center">Alice</td>
+<td>Estatística Básica</td>
 </tr>
 <tr class="even">
-<td>92</td>
-<td>Partido 2</td>
-<td>P2</td>
+<td align="center">Alice</td>
+<td>História Geral</td>
 </tr>
 <tr class="odd">
-<td>93</td>
-<td>Partido 3</td>
-<td>P3</td>
+<td align="center">Benjamin</td>
+<td>Cálculo I</td>
 </tr>
 <tr class="even">
-<td>94</td>
-<td>Partido 4</td>
-<td>P4</td>
+<td align="center">Benjamin</td>
+<td>Estatística Básica</td>
 </tr>
 <tr class="odd">
-<td>95</td>
-<td>Partido 5</td>
-<td>P5</td>
+<td align="center">Benjamin</td>
+<td>Inglês Intermediário</td>
 </tr>
 </tbody>
 </table>
-<hr />
-</div>
-<div id="tabela-candidato" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> 🧾 Tabela: Candidato<a href="#tabela-candidato" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A livraria possui apenas um exemplar do livro <em>Estatística básica</em>.
+Dois clientes selecionam esse livro.
+O computador de um deles sofre uma pane antes da confirmação do pedido, e o sistema é reiniciado.
+Ao retornar, o carrinho do cliente permanece intacto.</p>
+<p>Com relação a essa situação, julgue os itens seguintes:</p>
 <table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>I - A consistência do banco de dados foi violada temporariamente.</td>
+</tr>
+<tr class="even">
+<td>II - O sistema não emprega atomicidade.</td>
+</tr>
+<tr class="odd">
+<td>III - Todas as transações devem ser fechadas após a recuperação do sistema.</td>
+</tr>
+</tbody>
+</table>
+<p>Assinale a opção correta:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>(A) Apenas um item está certo</td>
+</tr>
+<tr class="even">
+<td>(B) Apenas I e II</td>
+</tr>
+<tr class="odd">
+<td>(C) Apenas I e III</td>
+</tr>
+<tr class="even">
+<td>(D) Apenas II e III</td>
+</tr>
+<tr class="odd">
+<td>(E) Nenhum item está certo</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="questão-4.6" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Questão 4.6<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#quest%C3%A3o-4.6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pedro foi contratado como desenvolvedor de software de uma empresa.
+Em seu primeiro dia de trabalho ele se deparou com o DER (Diagrama Entidade-Relacionamento), que representa os dados de um sistema de controle de malotes.
+Foi solicitado a Pedro relatório para o sistema contendo os seguintes dados: o nome de todos os funcionários que enviaram os malotes, o código dos malotes enviados, a descrição de seus conteúdos e a situação dos malotes.
+Para a geração do relatório, Pedro tem que fazer uma consulta utilizando o comando SELECT da linguagem SQL.</p>
+<p><img src="08-Semana-2026-05-05/media/08-questao-4.6.jpg.jpg" /></p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th>Número</th>
-<th>Nome</th>
+<th>Conhecidos o modelo conceitual de dados e os dados necessários para a tarefa de Pedro, o comando SELECT que ele deve executar para realizar a consulta e produzir o relatório corretamente é:</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>91</td>
-<td>Candidato 1</td>
+<td>A) SELECT NOME,CODIGO_MALOTE,DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS ON (CODIGO_CONTEUDO = CODIGO_CONTEUDO) INNER JOIN FUNCIONARIOS ON (MATRICULA = MATRICULA);</td>
 </tr>
 <tr class="even">
-<td>92</td>
-<td>Candidato 2</td>
+<td>B) SELECT NOME, CODIGO_MALOTE, DESCRICAO, SITUACAO_MALOTE FROM MALOTES, CONTEUDOS, FUNCIONARIOS WHERE (CODIGO_CONTEUDO = CODIGO_CONTEUDO) AND (MATRICULA = MATRICULA);</td>
 </tr>
 <tr class="odd">
-<td>93</td>
-<td>Candidato 3</td>
+<td>C) SELECT NOME,CODIGO_MALOTE,DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS INNER JOIN FUNCIONARIOS ON(MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO) ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);</td>
 </tr>
 <tr class="even">
-<td>94</td>
-<td>Candidato 4</td>
+<td>D) SELECT NOME, CODIGO_MALOTE, DESCRICAO, SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS ON (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO) INNER JOIN FUNCIONARIOS ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);</td>
 </tr>
 <tr class="odd">
-<td>95</td>
-<td>Candidato 5</td>
+<td>E) SELECT NOME, CODIGO_MALOTE, DESCRICAO, SITUACAO_MALOTE FROM MALOTES, CONTEUDOS, FUNCIONARIOS INNER JOIN WHERE (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO) AND (MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA); |</td>
 </tr>
 </tbody>
 </table>
-<hr />
 </div>
-<div id="tabela-votação" class="section level3 hasAnchor" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> 🧾 Tabela: Votação<a href="#tabela-vota%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questão-4.7" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Questão 4.7<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#quest%C3%A3o-4.7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Considere o diagrama de entidades e relacionamentos a seguir, onde as chaves primárias de cada entidade se encontram na parte superior dos retângulos.
+As entidades fortes são representadas por retângulos e as entidades fracas são representadas por retângulos com cantos arredondados.</p>
+<p>O diagrama atende às seguintes restrições:</p>
 <table>
-<thead>
-<tr class="header">
-<th>Partido</th>
-<th>Votos</th>
-<th>Estado</th>
-</tr>
-</thead>
+<colgroup>
+<col width="100%" />
+</colgroup>
 <tbody>
 <tr class="odd">
-<td>91</td>
-<td>12345</td>
-<td>AC</td>
+<td>I - entre Ent1 e Ent2, tem-se um relacionamento de muitos para muitos;</td>
 </tr>
 <tr class="even">
-<td>91</td>
-<td>98323</td>
-<td>PE</td>
+<td>II - entre as Entidades Ent2 e Ent3, tem-se um relacionamento de um para nenhum, um ou muitos;</td>
 </tr>
 <tr class="odd">
-<td>91</td>
-<td>1726453</td>
-<td>SP</td>
+<td>III - entre Ent1 e Ent5, tem-se um relacionamento de zero ou um para zero, um ou muitos; e</td>
 </tr>
 <tr class="even">
-<td>92</td>
-<td>98463</td>
-<td>AC</td>
-</tr>
-<tr class="odd">
-<td>92</td>
-<td>192837</td>
-<td>PE</td>
-</tr>
-<tr class="even">
-<td>92</td>
-<td>4283747</td>
-<td>SP</td>
-</tr>
-<tr class="odd">
-<td>93</td>
-<td>16253</td>
-<td>AC</td>
-</tr>
-<tr class="even">
-<td>93</td>
-<td>293845</td>
-<td>PE</td>
-</tr>
-<tr class="odd">
-<td>93</td>
-<td>6253745</td>
-<td>SP</td>
-</tr>
-<tr class="even">
-<td>94</td>
-<td>98372</td>
-<td>AC</td>
-</tr>
-<tr class="odd">
-<td>94</td>
-<td>598333</td>
-<td>PE</td>
-</tr>
-<tr class="even">
-<td>94</td>
-<td>8271347</td>
-<td>SP</td>
-</tr>
-<tr class="odd">
-<td>95</td>
-<td>46837</td>
-<td>AC</td>
-</tr>
-<tr class="even">
-<td>95</td>
-<td>327264</td>
-<td>PE</td>
-</tr>
-<tr class="odd">
-<td>95</td>
-<td>5938374</td>
-<td>SP</td>
+<td>IV - entre Ent3 e Ent4, tem-se um relacionamento de muitos para muitos.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-</div>
-<div id="pergunta-se" class="section level3 hasAnchor" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> PERGUNTA-SE<a href="revisão-temas-específicos-ads-banco-de-dados.html#pergunta-se" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Com base nas informações e na situação apresentada, qual o comando SQL que seleciona corretamente os nomes dos candidatos, seus partidos e o total de votos de cada partido nessa eleição?</p>
-</div>
-<div id="alternativas" class="section level3 hasAnchor" number="2.1.5">
-<h3><span class="header-section-number">2.1.5</span> Alternativas<a href="revisão-temas-específicos-ads-banco-de-dados.html#alternativas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb18"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb18-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb18-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">SUM</span>(v.votos)</span>
-<span id="cb18-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb18-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb18-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb18-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero;</span></code></pre></div>
-<ol start="2" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb19"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb19-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">COUNT</span>(v.votos)</span>
-<span id="cb19-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb19-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb19-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome;</span></code></pre></div>
-<ol start="3" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb20"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb20-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">SUM</span>(v.votos)</span>
-<span id="cb20-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb20-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb20-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome;</span></code></pre></div>
-<ol start="4" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb21"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb21-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, v.votos</span>
-<span id="cb21-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb21-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb21-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome, <span class="fu">SUM</span>(v.votos);</span></code></pre></div>
-<ol start="5" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb22"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb22-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">COUNT</span>(v.votos)</span>
-<span id="cb22-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb22-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb22-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome, v.votos;</span></code></pre></div>
-<hr />
-</div>
-</div>
-<div id="questão-4" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Questão 4<a href="revisão-temas-específicos-ads-banco-de-dados.html#quest%C3%A3o-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Leia o texto a seguir:</p>
-<blockquote>
-<p><strong>JOÃO GRILO:</strong> - I<em>sso é coisa de seca. Acaba nisso, essa fome: ninguém pode ter menino e haja cavalo no mundo. A comida é mais barata e é coisa que se pode vender. Mas seu cavalo, como foi?</em></p>
-<p><strong>CHICÓ:</strong> - <em>Foi uma velha que me vendeu barato, porque ia se mudar, mas recomendou todo cuidado, porque o cavalo era bento. E só podia ser mesmo, porque cavalo bom como aquele eu nunca tinha visto.</em></p>
-</blockquote>
-<p>(SUASSUNA, A. <em>Auto da compadecida</em>, 2000)</p>
-<hr />
-<div id="faça-um-diagrama-entidade-relacionamento-baseado-nestas-informações-e-responda" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> FAÇA UM DIAGRAMA ENTIDADE-RELACIONAMENTO BASEADO NESTAS INFORMAÇÕES E RESPONDA<a href="revisão-temas-específicos-ads-banco-de-dados.html#fa%C3%A7a-um-diagrama-entidade-relacionamento-baseado-nestas-informa%C3%A7%C3%B5es-e-responda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A seguir apresenta-se um modelo de dados elaborado a partir do diálogo entre Chicó e João Grilo.</p>
-<p>Com base no diálogo e no diagrama apresentados, avalie as afirmativas:</p>
-</div>
-<div id="afirmativas" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Afirmativas<a href="revisão-temas-específicos-ads-banco-de-dados.html#afirmativas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p>I. O Chicó e a velha poderão ser cadastrados na entidade pessoa.</p></li>
-<li><ol start="2" style="list-style-type: upper-roman">
-<li>O Chicó e a velha poderão ter mais que um cavalo cadastrado.</li>
-</ol></li>
-<li><ol start="3" style="list-style-type: upper-roman">
-<li>O atributo rg da entidade pessoa pode ter a função de chave primária nessa entidade.</li>
-</ol></li>
-<li><ol start="4" style="list-style-type: upper-roman">
-<li>O cavalo deverá ter no mínimo uma pessoa e uma pessoa poderá ser cadastrada sem a necessidade de ter um cavalo.</li>
-</ol></li>
-</ul>
-<hr />
-</div>
-<div id="alternativas-1" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Alternativas<a href="revisão-temas-específicos-ads-banco-de-dados.html#alternativas-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A. I e III.</p>
-<p>B. I e IV.</p>
-<p>C. II e III.</p>
-<p>D. I, II e IV.</p>
-<p>E. II, III e IV.</p>
-<hr />
-</div>
-</div>
-<div id="respostas" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Respostas:<a href="revisão-temas-específicos-ads-banco-de-dados.html#respostas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="08-Semana-2026-05-05/media/08-questao-4.7.jpg" /></p>
+<p>Aplicando a terceira forma normal ao modelo, qual será o total de colunas que deve ser criado para representar as chaves estrangeiras?</p>
 <table>
-<thead>
-<tr class="header">
-<th>Questão</th>
-<th>Resposta</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td>3</td>
-<td><strong>C</strong></td>
+<td>A) 3</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td><strong>B</strong></td>
+<td>B) 5</td>
+</tr>
+<tr class="odd">
+<td>C) 7</td>
+</tr>
+<tr class="even">
+<td>D) 8</td>
+</tr>
+<tr class="odd">
+<td>E) 9</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="questão-6.7" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Questão 6.7<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#quest%C3%A3o-6.7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O modelo lógico de dados fornece uma visão da maneira como os dados serão armazenados.
+A figura a seguir representa o modelo lógico de um ambiente observado em um escritório contábil.</p>
+<p>Em relação ao modelo, avalie as afirmativas.</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>I.     A entidade Declaração Imposto de Renda é uma entidade fraca.</td>
+</tr>
+<tr class="even">
+<td>II.   O relacionamento entre Contribuinte e Malha Fina é do tipo N:M (muitos para muitos).</td>
+</tr>
+<tr class="odd">
+<td>III. O atributo CPF da entidade Contribuinte tem a função de chave estrangeira na entidade Declaração Imposto de Renda e no relacionamento Contribuinte_MalhaFina.</td>
+</tr>
+<tr class="even">
+<td>IV.  A entidade Malha Fina não possui chave primária somente chave estrangeira.</td>
+</tr>
+<tr class="odd">
+<td>V. O relacionamento Contribuinte_MalhaFina é um relacionamento ternário.</td>
+</tr>
+</tbody>
+</table>
+<p>É correto apenas o que se afirma em:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>A.    I, II e III.</td>
+</tr>
+<tr class="even">
+<td>B.    I, II e IV.</td>
+</tr>
+<tr class="odd">
+<td>C.    I, IV e V.</td>
+</tr>
+<tr class="even">
+<td>D.   II, III e V.</td>
+</tr>
+<tr class="odd">
+<td>E.    III, IV e V.</td>
+</tr>
+</tbody>
+</table>
+<div id="respostas-6" class="section level3 hasAnchor" number="8.4.1">
+<h3><span class="header-section-number">8.4.1</span> Respostas<a href="revisão-temas-específicos-ads-banco-de-dados-6.html#respostas-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>3.1 <strong>Alternativa correta: (E)</strong></p>
+<p>4.6 <strong>Alternativa correta: (B)</strong></p>
+<p>4.7 <strong>Alternativa correta: (E)</strong></p>
+<p>6.7 <strong>Alternativa correta: (A)</strong></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -567,8 +506,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="revisão-temas-específicos-ads-banco-de-dados-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="revisão-temas-específicos-ads-banco-de-dados-5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="revisão-temas-específicos-ads-banco-de-dados-7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -599,7 +538,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/miguel7penteado/2026-1sem-ADS-Revisao/edit/main/02-revisao-02-2026-03-03.Rmd",
+    "link": "https://github.com/miguel7penteado/2026-1sem-ADS-Revisao/edit/main/08-revisao-08-2026-05-05.Rmd",
     "text": "Edit"
   },
   "history": {
