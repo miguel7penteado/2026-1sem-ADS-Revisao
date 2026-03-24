@@ -9,7 +9,7 @@ editor_options:
     wrap: sentence
 ---
 
-# REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS
+# REVISÃO TEMAS ESPECÍFICOS ADS: REDES DE COMPUTADORES
 
 #### 10/03/2026 {.unnumbered}
 
@@ -17,34 +17,22 @@ editor_options:
 
 ## Questão 3.3
 
-As comunicações de um software cliente com o respectivo servidor instalado em um equipamento em uma LAN (local area network) apresentam lentidão.
-Após várias reclamações dos usuários, o responsável pelo software e o gerente de redes foram convocados para analisar o problema.
-A partir de uma análise da topologia da rede, foi identificado que o departamento possuía 45 microcomputadores clientes na mesma LAN, interligados ao servidor por meio de um único **hub**.
+As comunicações de um software cliente com o respectivo servidor instalado em um
+equipamento em uma LAN (local area network) apresentam lentidão. Após várias 
+reclamações dos usuários, o responsável pelo software e o gerente de redes foram
+convocados para analisar o problema. A partir de uma análise da topologia da 
+rede, foi identificado que o departamento possuía 45 microcomputadores clientes 
+na mesma LAN, interligados ao servidor por meio de um único **hub**.
 
 ![](03-Semana-2026-03-10/media/03-questao-03.jpg)
 
-Concluiu-se que o problema de lentidão estava relacionado ao elevado número de colisões na LAN.
-A solução correta para esse problema hipotético é a substituição do hub por:
-
--   
-
-    (A) outros 4 hubs interligados contendo, cada um, menos portas de conexão, o que resultaria na diminuição do volume de colisões na LAN e aumentaria o desempenho da rede.
-
--   
-
-    (B) um switch, que permitiria a diminuição do volume de colisões e uma melhoria no desempenho da rede.
-
--   
-
-    (C) um switch, que traria benefícios relacionados ao desempenho da rede, uma vez que o número de colisões permaneceria inalterado.
-
--   
-
-    (D) um switch, que diminuiria o desempenho da rede, uma vez que aumentaria o volume de colisões.
-
--   
-
-    (E) um switch, que aumentaria o volume de colisões e melhoraria o desempenho da rede.
+| Concluiu-se que o problema de lentidão estava relacionado ao elevado número de colisões na LAN. A solução correta para esse problema hipotético é a substituição do hub por: |
+|------------------------------------------------------------------------|
+| (A) Outros 4 hubs interligados contendo, cada um, menos portas de conexão, o que resultaria na diminuição do volume de colisões na LAN e aumentaria o desempenho da rede. |
+| (B) Um switch, que permitiria a diminuição do volume de colisões e uma melhoria no desempenho da rede. |
+| (C) Um switch, que traria benefícios relacionados ao desempenho da rede, uma vez que o número de colisões permaneceria inalterado. |
+| (D) Um switch, que diminuiria o desempenho da rede, uma vez que aumentaria o volume de colisões. |
+| (E) Um switch, que aumentaria o volume de colisões e melhoraria o desempenho da rede. |
 
 ## Questão 6.1
 
@@ -52,27 +40,15 @@ Considere o arranjo computacional apresentado a seguir.
 
 ![](03-Semana-2026-03-10/media/06-questao-01.jpg)
 
-A característica fundamental esperada para tais sistemas de modo a ter o menor impacto sobre a experiência do usuário final é:
 
--   
+| A característica fundamental esperada para tais sistemas de modo a ter o menor impacto sobre a experiência do usuário final é: |
+|--------------------------------------------------------------------------------------------------------------------------------|
+| (A) A transparência entre as entidades do sistema.                                                                             |
+| (B) A linguagem de programação orientada a eventos.                                                                            |
+| (C) A hardware com elevada taxa de processamento de dados.                                                                     |
+| (D) A base de dados deve estar localizada no mesmo espaço fixo.                                                                |
+| (E) A independência quanto à disponibilidade de conexão à rede de comunicação de dados.                                        |
 
-    (A) a transparência entre as entidades do sistema.\
-
--   
-
-    (B) a linguagem de programação orientada a eventos.\
-
--   
-
-    (C) o hardware com elevada taxa de processamento de dados.\
-
--   
-
-    (D) a base de dados deve estar localizada no mesmo espaço fixo.\
-
--   
-
-    (E) a independência quanto à disponibilidade de conexão à rede de comunicação de dados.
 
 
 
@@ -80,42 +56,37 @@ A característica fundamental esperada para tais sistemas de modo a ter o menor 
 
 Leia o texto a seguir.
 
-O serviço DNS (Domain Name System) traduz nomes alfanuméricos de hosts em 
-endereços numéricos, de acordo com o protocolo IP (Internet Protocol). 
-Essa ação é comumente chamada de resolução de endereço. Considere um conjunto de
-computadores conectados em uma rede local, os quais têm à sua disposição um 
-servidor DNS capaz de resolver endereços, sejam eles internos ou externos.
+O serviço DNS (Domain Name System) traduz nomes alfanuméricos de hosts em endereços numéricos, de acordo com o protocolo IP (Internet Protocol).
+Essa ação é comumente chamada de resolução de endereço.
+Considere um conjunto de computadores conectados em uma rede local, os quais têm à sua disposição um servidor DNS capaz de resolver endereços, sejam eles internos ou externos.
 
 Nesse contexto, avalie as afirmativas a seguir:
 
-I. O servidor DNS também executa funções de cliente DNS quando não é autoritativo para determinado endereço.  
+I. O servidor DNS também executa funções de cliente DNS quando não é autoritativo para determinado endereço.
 
-II. A adoção do IPv6 dispensará serviços de DNS, pois suas funções serão incorporadas pelo próprio protocolo IP.  
+II. A adoção do IPv6 dispensará serviços de DNS, pois suas funções serão incorporadas pelo próprio protocolo IP.
 
-III. O cache DNS permite que determinada requisição do cliente DNS possa ser resolvida sem que seja necessário recorrer a outro serviço DNS.  
+III. O cache DNS permite que determinada requisição do cliente DNS possa ser resolvida sem que seja necessário recorrer a outro serviço DNS.
 
-IV. O protocolo DNS depende de um banco de dados distribuído.  
+IV. O protocolo DNS depende de um banco de dados distribuído.
 
-É correto apenas o que se afirma em:
 
-- (A) I e II.  
-- (B) I e III.  
-- (C) II e IV.  
-- (D) I, III e IV.  
-- (E) II, III e IV.  
+| É correto apenas o que se afirma em: |
+|--------------------------------------|
+| (A) I e II.                          |
+| (B) I e III.                         |
+| (C) II e IV.                         |
+| (D) I, III e IV.                     |
+| (E) II, III e IV.                    |
+
+
+
 
 ### Resposta
 
-
-
-
-
-
 ### Respostas
 
-3.3 **Alternativa correta: (B)** 
-6.1 **Alternativa correta: (A)**
-6.9 **Alternativa correta: (D)**
+3.3 **Alternativa correta: (B)** 6.1 **Alternativa correta: (A)** 6.9 **Alternativa correta: (D)**
 
 ### Comentário
 
