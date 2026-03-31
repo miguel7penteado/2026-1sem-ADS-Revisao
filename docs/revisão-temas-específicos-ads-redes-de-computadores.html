@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas</title>
-  <meta name="description" content="Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <title>Capítulo 3 REVISÃO TEMAS ESPECÍFICOS ADS: REDES DE COMPUTADORES | ADS - 1sem 2026 - Revisão das Disciplinas</title>
+  <meta name="description" content="Capítulo 3 REVISÃO TEMAS ESPECÍFICOS ADS: REDES DE COMPUTADORES | ADS - 1sem 2026 - Revisão das Disciplinas" />
   <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <meta property="og:title" content="Capítulo 3 REVISÃO TEMAS ESPECÍFICOS ADS: REDES DE COMPUTADORES | ADS - 1sem 2026 - Revisão das Disciplinas" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
   
   <meta name="github-repo" content="miguel7penteado/2026-1sem-ADS-Revisao" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS | ADS - 1sem 2026 - Revisão das Disciplinas" />
+  <meta name="twitter:title" content="Capítulo 3 REVISÃO TEMAS ESPECÍFICOS ADS: REDES DE COMPUTADORES | ADS - 1sem 2026 - Revisão das Disciplinas" />
   
   
   <meta name="twitter:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html"/>
-<link rel="next" href="revisão-temas-específicos-ads-redes-de-computadores.html"/>
+<link rel="prev" href="revisão-temas-específicos-ads-banco-de-dados.html"/>
+<link rel="next" href="revisão-temas-específicos-ads-banco-de-dados-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -278,293 +278,132 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="revisão-temas-específicos-ads-banco-de-dados" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Capítulo 2</span> REVISÃO TEMAS ESPECÍFICOS ADS: BANCO DE DADOS<a href="revisão-temas-específicos-ads-banco-de-dados.html#revis%C3%A3o-temas-espec%C3%ADficos-ads-banco-de-dados" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="section-2" class="section level4 unnumbered hasAnchor">
-<h4>03/03/2026<a href="revisão-temas-específicos-ads-banco-de-dados.html#section-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="revisão-temas-específicos-ads-redes-de-computadores" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> REVISÃO TEMAS ESPECÍFICOS ADS: REDES DE COMPUTADORES<a href="revisão-temas-específicos-ads-redes-de-computadores.html#revis%C3%A3o-temas-espec%C3%ADficos-ads-redes-de-computadores" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="section-3" class="section level4 unnumbered hasAnchor">
+<h4>10/03/2026<a href="revisão-temas-específicos-ads-redes-de-computadores.html#section-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="professor-miguél-suares-1" class="section level4 unnumbered hasAnchor">
-<h4>Professor Miguél Suares<a href="revisão-temas-específicos-ads-banco-de-dados.html#professor-migu%C3%A9l-suares-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<hr />
+<div id="professor-miguél-suares-2" class="section level4 unnumbered hasAnchor">
+<h4>Professor Miguél Suares<a href="revisão-temas-específicos-ads-redes-de-computadores.html#professor-migu%C3%A9l-suares-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="questão-3" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Questão 3<a href="revisão-temas-específicos-ads-banco-de-dados.html#quest%C3%A3o-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="02-Semana-2026-03-03/media/03-questao-01.jpg" /></p>
-<p>Um cliente solicitou a uma empresa a criação de um banco de dados para armazenar o resultado de uma eleição presidencial, com dados sobre os partidos políticos, os candidatos e a votação obtida por cada candidato em cada unidade da federação.</p>
-<p>As tabelas a seguir contêm os dados registrados a partir do resultado dessa eleição.</p>
-<div id="tabela-partido" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> 🧾 Tabela: Partido<a href="#tabela-partido" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questão-3.3" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Questão 3.3<a href="revisão-temas-específicos-ads-redes-de-computadores.html#quest%C3%A3o-3.3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As comunicações de um software cliente com o respectivo servidor instalado em um
+equipamento em uma LAN (local area network) apresentam lentidão. Após várias
+reclamações dos usuários, o responsável pelo software e o gerente de redes foram
+convocados para analisar o problema. A partir de uma análise da topologia da
+rede, foi identificado que o departamento possuía 45 microcomputadores clientes
+na mesma LAN, interligados ao servidor por meio de um único <strong>hub</strong>.</p>
+<p><img src="03-Semana-2026-03-10/media/03-questao-03.jpg" /></p>
 <table>
+<colgroup>
+<col width="100%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th>Número</th>
-<th>Nome</th>
-<th>Sigla</th>
+<th>Concluiu-se que o problema de lentidão estava relacionado ao elevado número de colisões na LAN. A solução correta para esse problema hipotético é a substituição do hub por:</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>91</td>
-<td>Partido 1</td>
-<td>P1</td>
+<td>(A) Outros 4 hubs interligados contendo, cada um, menos portas de conexão, o que resultaria na diminuição do volume de colisões na LAN e aumentaria o desempenho da rede.</td>
 </tr>
 <tr class="even">
-<td>92</td>
-<td>Partido 2</td>
-<td>P2</td>
+<td>(B) Um switch, que permitiria a diminuição do volume de colisões e uma melhoria no desempenho da rede.</td>
 </tr>
 <tr class="odd">
-<td>93</td>
-<td>Partido 3</td>
-<td>P3</td>
+<td>(C) Um switch, que traria benefícios relacionados ao desempenho da rede, uma vez que o número de colisões permaneceria inalterado.</td>
 </tr>
 <tr class="even">
-<td>94</td>
-<td>Partido 4</td>
-<td>P4</td>
+<td>(D) Um switch, que diminuiria o desempenho da rede, uma vez que aumentaria o volume de colisões.</td>
 </tr>
 <tr class="odd">
-<td>95</td>
-<td>Partido 5</td>
-<td>P5</td>
+<td>(E) Um switch, que aumentaria o volume de colisões e melhoraria o desempenho da rede.</td>
 </tr>
 </tbody>
 </table>
-<hr />
 </div>
-<div id="tabela-candidato" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> 🧾 Tabela: Candidato<a href="#tabela-candidato" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questão-6.1" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Questão 6.1<a href="revisão-temas-específicos-ads-redes-de-computadores.html#quest%C3%A3o-6.1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Considere o arranjo computacional apresentado a seguir.</p>
+<p><img src="03-Semana-2026-03-10/media/06-questao-01.jpg" /></p>
 <table>
+<colgroup>
+<col width="100%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th>Número</th>
-<th>Nome</th>
+<th>A característica fundamental esperada para tais sistemas de modo a ter o menor impacto sobre a experiência do usuário final é:</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>91</td>
-<td>Candidato 1</td>
+<td>(A) A transparência entre as entidades do sistema.</td>
 </tr>
 <tr class="even">
-<td>92</td>
-<td>Candidato 2</td>
+<td>(B) A linguagem de programação orientada a eventos.</td>
 </tr>
 <tr class="odd">
-<td>93</td>
-<td>Candidato 3</td>
+<td>(C) A hardware com elevada taxa de processamento de dados.</td>
 </tr>
 <tr class="even">
-<td>94</td>
-<td>Candidato 4</td>
+<td>(D) A base de dados deve estar localizada no mesmo espaço fixo.</td>
 </tr>
 <tr class="odd">
-<td>95</td>
-<td>Candidato 5</td>
+<td>(E) A independência quanto à disponibilidade de conexão à rede de comunicação de dados.</td>
 </tr>
 </tbody>
 </table>
-<hr />
 </div>
-<div id="tabela-votação" class="section level3 hasAnchor" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> 🧾 Tabela: Votação<a href="#tabela-vota%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questão-6.9" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Questão 6.9<a href="revisão-temas-específicos-ads-redes-de-computadores.html#quest%C3%A3o-6.9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Leia o texto a seguir.</p>
+<p>O serviço DNS (Domain Name System) traduz nomes alfanuméricos de hosts em endereços numéricos, de acordo com o protocolo IP (Internet Protocol).
+Essa ação é comumente chamada de resolução de endereço.
+Considere um conjunto de computadores conectados em uma rede local, os quais têm à sua disposição um servidor DNS capaz de resolver endereços, sejam eles internos ou externos.</p>
+<p>Nesse contexto, avalie as afirmativas a seguir:</p>
+<p>I. O servidor DNS também executa funções de cliente DNS quando não é autoritativo para determinado endereço.</p>
+<ol start="2" style="list-style-type: upper-roman">
+<li><p>A adoção do IPv6 dispensará serviços de DNS, pois suas funções serão incorporadas pelo próprio protocolo IP.</p></li>
+<li><p>O cache DNS permite que determinada requisição do cliente DNS possa ser resolvida sem que seja necessário recorrer a outro serviço DNS.</p></li>
+<li><p>O protocolo DNS depende de um banco de dados distribuído.</p></li>
+</ol>
 <table>
 <thead>
 <tr class="header">
-<th>Partido</th>
-<th>Votos</th>
-<th>Estado</th>
+<th>É correto apenas o que se afirma em:</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>91</td>
-<td>12345</td>
-<td>AC</td>
+<td>(A) I e II.</td>
 </tr>
 <tr class="even">
-<td>91</td>
-<td>98323</td>
-<td>PE</td>
+<td>(B) I e III.</td>
 </tr>
 <tr class="odd">
-<td>91</td>
-<td>1726453</td>
-<td>SP</td>
+<td>(C) II e IV.</td>
 </tr>
 <tr class="even">
-<td>92</td>
-<td>98463</td>
-<td>AC</td>
+<td>(D) I, III e IV.</td>
 </tr>
 <tr class="odd">
-<td>92</td>
-<td>192837</td>
-<td>PE</td>
-</tr>
-<tr class="even">
-<td>92</td>
-<td>4283747</td>
-<td>SP</td>
-</tr>
-<tr class="odd">
-<td>93</td>
-<td>16253</td>
-<td>AC</td>
-</tr>
-<tr class="even">
-<td>93</td>
-<td>293845</td>
-<td>PE</td>
-</tr>
-<tr class="odd">
-<td>93</td>
-<td>6253745</td>
-<td>SP</td>
-</tr>
-<tr class="even">
-<td>94</td>
-<td>98372</td>
-<td>AC</td>
-</tr>
-<tr class="odd">
-<td>94</td>
-<td>598333</td>
-<td>PE</td>
-</tr>
-<tr class="even">
-<td>94</td>
-<td>8271347</td>
-<td>SP</td>
-</tr>
-<tr class="odd">
-<td>95</td>
-<td>46837</td>
-<td>AC</td>
-</tr>
-<tr class="even">
-<td>95</td>
-<td>327264</td>
-<td>PE</td>
-</tr>
-<tr class="odd">
-<td>95</td>
-<td>5938374</td>
-<td>SP</td>
+<td>(E) II, III e IV.</td>
 </tr>
 </tbody>
 </table>
-<hr />
+<div id="resposta" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Resposta<a href="revisão-temas-específicos-ads-redes-de-computadores.html#resposta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="pergunta-se" class="section level3 hasAnchor" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> PERGUNTA-SE<a href="revisão-temas-específicos-ads-banco-de-dados.html#pergunta-se" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Com base nas informações e na situação apresentada, qual o comando SQL que seleciona corretamente os nomes dos candidatos, seus partidos e o total de votos de cada partido nessa eleição?</p>
+<div id="respostas-1" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Respostas<a href="revisão-temas-específicos-ads-redes-de-computadores.html#respostas-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>3.3 <strong>Alternativa correta: (B)</strong> 6.1 <strong>Alternativa correta: (A)</strong> 6.9 <strong>Alternativa correta: (D)</strong></p>
 </div>
-<div id="alternativas" class="section level3 hasAnchor" number="2.1.5">
-<h3><span class="header-section-number">2.1.5</span> Alternativas<a href="revisão-temas-específicos-ads-banco-de-dados.html#alternativas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb18"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb18-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb18-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">SUM</span>(v.votos)</span>
-<span id="cb18-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb18-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb18-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb18-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero;</span></code></pre></div>
-<ol start="2" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb19"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb19-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">COUNT</span>(v.votos)</span>
-<span id="cb19-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb19-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb19-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb19-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome;</span></code></pre></div>
-<ol start="3" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb20"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb20-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">SUM</span>(v.votos)</span>
-<span id="cb20-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb20-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb20-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb20-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome;</span></code></pre></div>
-<ol start="4" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb21"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb21-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, v.votos</span>
-<span id="cb21-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb21-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb21-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb21-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome, <span class="fu">SUM</span>(v.votos);</span></code></pre></div>
-<ol start="5" style="list-style-type: upper-alpha">
-<li></li>
-</ol>
-<div class="sourceCode" id="cb22"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb22-1"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-1" tabindex="-1"></a><span class="kw">SELECT</span> c.nome, p.nome, <span class="fu">COUNT</span>(v.votos)</span>
-<span id="cb22-2"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-2" tabindex="-1"></a><span class="kw">FROM</span> Partido p, Candidato c, Votacao v</span>
-<span id="cb22-3"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-3" tabindex="-1"></a><span class="kw">WHERE</span> c.numero <span class="op">=</span> p.numero <span class="kw">AND</span> v.partido <span class="op">=</span> c.numero</span>
-<span id="cb22-4"><a href="revisão-temas-específicos-ads-banco-de-dados.html#cb22-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.nome, p.nome, v.votos;</span></code></pre></div>
-<hr />
-</div>
-</div>
-<div id="questão-4" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Questão 4<a href="revisão-temas-específicos-ads-banco-de-dados.html#quest%C3%A3o-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Leia o texto a seguir:</p>
-<blockquote>
-<p><strong>JOÃO GRILO:</strong> - <em>Isso é coisa de seca. Acaba nisso, essa fome: ninguém pode
-ter menino e haja cavalo no mundo. A comida é mais barata e é coisa que se pode
-vender. Mas seu cavalo, como foi?</em></p>
-<p><strong>CHICÓ:</strong> - <em>Foi uma velha que me vendeu barato, porque ia se mudar, mas
-recomendou todo cuidado, porque o cavalo era bento. E só podia ser mesmo,
-porque cavalo bom como aquele eu nunca tinha visto.</em></p>
-</blockquote>
-<p>(SUASSUNA, A. <em>Auto da compadecida</em>, 2000)</p>
-<hr />
-<div id="considere-o-diagrama-entidade-relacionamento-baseado-nestas-informações-e-responda" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Considere o Diagrama ENTIDADE-RELACIONAMENTO BASEADO NESTAS INFORMAÇÕES E RESPONDA<a href="revisão-temas-específicos-ads-banco-de-dados.html#considere-o-diagrama-entidade-relacionamento-baseado-nestas-informa%C3%A7%C3%B5es-e-responda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="images/parte-02-questao-02.svg" /><!-- --></p>
-<p>A seguir apresenta-se um modelo de dados elaborado a partir do diálogo entre Chicó e João Grilo.</p>
-<p>Com base no diálogo e no diagrama apresentados, avalie as afirmativas:</p>
-</div>
-<div id="afirmativas" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Afirmativas<a href="revisão-temas-específicos-ads-banco-de-dados.html#afirmativas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p>I. O Chicó e a velha poderão ser cadastrados na entidade pessoa.</p></li>
-<li><ol start="2" style="list-style-type: upper-roman">
-<li>O Chicó e a velha poderão ter mais que um cavalo cadastrado.</li>
-</ol></li>
-<li><ol start="3" style="list-style-type: upper-roman">
-<li>O atributo rg da entidade pessoa pode ter a função de chave primária nessa entidade.</li>
-</ol></li>
-<li><ol start="4" style="list-style-type: upper-roman">
-<li>O cavalo deverá ter no mínimo uma pessoa e uma pessoa poderá ser cadastrada sem a necessidade de ter um cavalo.</li>
-</ol></li>
-</ul>
-<hr />
-</div>
-<div id="alternativas-1" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Alternativas<a href="revisão-temas-específicos-ads-banco-de-dados.html#alternativas-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A. I e III.</p>
-<p>B. I e IV.</p>
-<p>C. II e III.</p>
-<p>D. I, II e IV.</p>
-<p>E. II, III e IV.</p>
-<hr />
-</div>
-</div>
-<div id="respostas" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Respostas:<a href="revisão-temas-específicos-ads-banco-de-dados.html#respostas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<table>
-<thead>
-<tr class="header">
-<th>Questão</th>
-<th>Resposta</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>3</td>
-<td><strong>C</strong></td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td><strong>B</strong></td>
-</tr>
-</tbody>
-</table>
+<div id="comentário" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Comentário<a href="revisão-temas-específicos-ads-redes-de-computadores.html#coment%C3%A1rio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O uso de <strong>switches</strong> reduz colisões porque permite comunicação ponto a ponto entre origem e destino, diferentemente do <strong>hub</strong>, que transmite dados para todos os dispositivos (broadcast), aumentando as colisões.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -572,8 +411,8 @@ porque cavalo bom como aquele eu nunca tinha visto.</em></p>
           </div>
         </div>
       </div>
-<a href="revisão-temas-específicos-ads---virtualização-recursividade-busca-binária.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="revisão-temas-específicos-ads-redes-de-computadores.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="revisão-temas-específicos-ads-banco-de-dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="revisão-temas-específicos-ads-banco-de-dados-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -604,7 +443,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/miguel7penteado/2026-1sem-ADS-Revisao/edit/main/02-revisao-02-2026-03-03.Rmd",
+    "link": "https://github.com/miguel7penteado/2026-1sem-ADS-Revisao/edit/main/03-revisao-03-2026-03-10.Rmd",
     "text": "Edit"
   },
   "history": {

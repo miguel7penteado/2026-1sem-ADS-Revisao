@@ -127,15 +127,52 @@ GROUP BY c.nome, p.nome, v.votos;
 
 Leia o texto a seguir:
 
-> **JOÃO GRILO:** - I*sso é coisa de seca. Acaba nisso, essa fome: ninguém pode ter menino e haja cavalo no mundo. A comida é mais barata e é coisa que se pode vender. Mas seu cavalo, como foi?*
+
+> **JOÃO GRILO:** - *Isso é coisa de seca. Acaba nisso, essa fome: ninguém pode 
+ter menino e haja cavalo no mundo. A comida é mais barata e é coisa que se pode 
+vender. Mas seu cavalo, como foi?*
 >
-> **CHICÓ:** - *Foi uma velha que me vendeu barato, porque ia se mudar, mas recomendou todo cuidado, porque o cavalo era bento. E só podia ser mesmo, porque cavalo bom como aquele eu nunca tinha visto.*
+> **CHICÓ:** - *Foi uma velha que me vendeu barato, porque ia se mudar, mas 
+recomendou todo cuidado, porque o cavalo era bento. E só podia ser mesmo, 
+porque cavalo bom como aquele eu nunca tinha visto.*
 
 (SUASSUNA, A. *Auto da compadecida*, 2000)
 
 ------------------------------------------------------------------------
 
-### FAÇA UM DIAGRAMA ENTIDADE-RELACIONAMENTO BASEADO NESTAS INFORMAÇÕES E RESPONDA
+### Considere o Diagrama ENTIDADE-RELACIONAMENTO BASEADO NESTAS INFORMAÇÕES E RESPONDA
+
+```{plantuml parte-02-questao-02, plantuml.path="images"}
+@startchen
+
+
+entity PESSOAS {
+  codigo <<KEY>>
+  rg
+  nome
+  cpf 
+}
+
+
+entity CAVALOS {
+  codigo <<KEY>>
+  raça
+  eh_bento 
+}
+
+
+
+relationship POSSUEM {
+  
+}
+
+PESSOAS    -1- POSSUEM
+POSSUEM    -1- CAVALOS
+
+
+@endchen
+```
+
 
 A seguir apresenta-se um modelo de dados elaborado a partir do diálogo entre Chicó e João Grilo.
 
