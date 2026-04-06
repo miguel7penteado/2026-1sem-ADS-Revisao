@@ -147,7 +147,7 @@ porque cavalo bom como aquele eu nunca tinha visto.*
 
 
 entity PESSOAS {
-  codigo <<KEY>>
+  codigo <<key>>
   rg
   nome
   cpf 
@@ -155,7 +155,7 @@ entity PESSOAS {
 
 
 entity CAVALOS {
-  codigo <<KEY>>
+  codigo <<key>>
   raça
   eh_bento 
 }
